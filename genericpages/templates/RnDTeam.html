@@ -12,28 +12,25 @@
     <![endif]-->
     <!-- Meta -->
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" name="viewport">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="Gradient Able Bootstrap admin template made using Bootstrap 4. The starter version of Gradient Able is completely free for personal project."
-          name="description"/>
-    <meta content="flat ui, admin , Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app"
-          name="keywords">
-    <meta content="codedthemes" name="author">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Gradient Able Bootstrap admin template made using Bootstrap 4. The starter version of Gradient Able is completely free for personal project." />
+    <meta name="keywords" content="flat ui, admin , Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="codedthemes">
     <!-- Favicon icon -->
-    <link href="{% static '/images/envriLOGO.png'%}" rel="icon" type="image/x-icon">
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+    <link rel="icon" href="{% static '/images/envriLOGO.png'%}" type="image/x-icon">
+    <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link href="{% static '/css/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap/css/bootstrap.min.css'%}">
     <!-- themify-icons line icon -->
-    <link href="{% static '/icon/themify-icons/themify-icons.css'%}" rel="stylesheet" type="text/css">
-    <link href="{% static '/icon/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/themify-icons/themify-icons.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/font-awesome/css/font-awesome.min.css'%}">
 
     <!-- ico font -->
-    <link href="{% static '/icon/icofont/css/icofont.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/icofont/css/icofont.css'%}">
     <!-- Style.css -->
-    <link href="{% static '/css/style.css'%}" rel="stylesheet" type="text/css">
-    <link href="{% static '/css/jquery.mCustomScrollbar.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery.mCustomScrollbar.css'%}">
 
     <style>
         h5.titleTrimming {
@@ -46,10 +43,10 @@
     .show-read-more .more-text{
         display: none;
     }
-
-    </style>
+</style>
 
 </head>
+
 
 
 <body>
@@ -61,14 +58,14 @@
     </div>
 </div>
 <!-- Pre-loader end -->
-<div class="pcoded" id="pcoded">
+<div id="pcoded" class="pcoded">
     <div class="pcoded-overlay-box"></div>
     <div class="pcoded-container navbar-wrapper">
 
         <nav class="navbar header-navbar pcoded-header">
             <div class="navbar-wrapper">
                 <div class="navbar-logo">
-                    <a class="mobile-menu" href="#!" id="mobile-collapse">
+                    <a class="mobile-menu" id="mobile-collapse" href="#!">
                         <i class="ti-menu"></i>
                     </a>
                     <div class="mobile-search">
@@ -76,15 +73,14 @@
                             <div class="main-search morphsearch-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                    <input class="form-control" placeholder="Enter Keyword" type="text">
-                                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                                    <span class="input-group-addon search-btn"><i class="ti-search" ></i></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <a href="../genericpages/genericpages?page=home">
-                        <img alt="Theme-Logo" class="img-fluid"
-                             src="{% static 'images/ENVRI-WHITE-LOGO.png' %}" style="width:65px;  padding:6px;margin-top:-5px;"/>
+                        <img class="img-fluid" src="{% static 'images/ENVRI-WHITE-LOGO.png' %}" style="width:65px;  padding:6px;margin-top:-5px;" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options">
                         <i class="ti-more"></i>
@@ -100,9 +96,8 @@
                             <div class="main-search morphsearch-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                    <input class="form-control" id="searchbox1" name="searchbox1" onchange="search(1);"
-                                           type="text">
-                                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    <input type="text" class="form-control" id="searchbox1" name="searchbox1" onchange="search(1);">
+                                    <span class="input-group-addon search-btn" ><i class="ti-search"></i></span>
                                 </div>
                             </div>
                         </li>
@@ -115,16 +110,13 @@
                     <ul class="nav-right">
                         <li class="header-notification">
                             <a href="#!">
-                                <i class="ti-shopping-cart" style="font-size:15pt; "></i>
-                                <span style="display: inline-block;font-size:10pt;font-weight:bold;"> <sup><span
-                                        id="MyCartCount">100</span></sup>  </span>
+                                <i style="font-size:15pt; " class="ti-shopping-cart"></i>
+                                <span style="display: inline-block;font-size:10pt;font-weight:bold;"> <sup><span id="MyCartCount" >100</span></sup>  </span>
                             </a>
                             <ul class="show-notification" id="MyCart">
                                 <li>
                                     <a href="#" onclick="">
-                                        <h6 style="color:blue;"><span class="btn btn-primary btn-icon"
-                                                                      style="font-size:15pt; padding:0px; padding-top:4px; padding-left:2px; height:30px;width:30px; text-align:center; margin-right:5px; margin-left:-10px;"><i
-                                                class="ti-cloud-down"></i></span>
+                                        <h6 style="color:blue;"><span class="btn btn-primary btn-icon" style="font-size:15pt; padding:0px; padding-top:4px; padding-left:2px; height:30px;width:30px; text-align:center; margin-right:5px; margin-left:-10px;"><i  class="ti-cloud-down"></i></span>
                                             My Basket</h6>
                                     </a>
                                 </li>
@@ -133,14 +125,12 @@
 
                         <li class="user-profile header-notification">
                             <a href="#!">
-                                <img alt="User-Profile-Image" class="img-radius"
-                                     src="{% static 'images/GuestICON.png' %}">
+                                <img src="{% static 'images/GuestICON.png' %}" class="img-radius" alt="User-Profile-Image">
                                 <span>Guest</span>
                                 <i class="ti-angle-down"></i>
                             </a>
                             <ul class="show-notification profile-notification">
-                                <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i> Login
-                                </a></li>
+                                <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i> Login </a> </li>
 
                             </ul>
                         </li>
@@ -158,46 +148,44 @@
                         <div class="pcoded-search">
                             <span class="searchbar-toggle">  </span>
                             <div class="pcoded-search-box ">
-                                <input id="searchbox2" name="searchbox2" onchange="search(2);" placeholder="Search"
-                                       type="text">
-                                <span class="search-icon"><i aria-hidden="true" class="ti-search"
-                                                             onclick="search(2);"></i></span>
+                                <input type="text" placeholder="Search" id="searchbox2" name="searchbox2" onchange="search(2);">
+                                <span class="search-icon" ><i class="ti-search" aria-hidden="true" onclick="search(2);"></i></span>
                             </div>
                         </div>
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Search Space</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="">
-                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1"  >
                                     <span class="pcoded-micon"><i class="ti-world"></i><b>D</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Webpages</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../dataset_elastic/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../dataset_elastic/genericsearch?term={{ searchTerm }}&page=1"  >
                                     <span class="pcoded-micon"><i class="ti-ruler-pencil"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Datasets</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Datasets</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../webAPI/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../webAPI/genericsearch?term={{ searchTerm }}&page=1"  >
                                     <span class="pcoded-micon"><i class="ti-control-shuffle"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Web APIs</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Web APIs</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../notebookSearch/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../notebookSearch/genericsearch?term={{ searchTerm }}&page=1"  >
                                     <span class="pcoded-micon"><i class="ti-package"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Notebooks</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Notebooks</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1&searchtype=imagesearch">
+                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1&searchtype=imagesearch"  >
                                     <span class="pcoded-micon"><i class="ti-gallery"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Images</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Images</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
@@ -205,8 +193,7 @@
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Visualization</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li>
-                                <a href="../genericpages/genericpages?page=graphV&term={{ searchTerm }}"
-                                   target="_blank">
+                                <a href="../genericpages/genericpages?page=graphV&term={{ searchTerm }}"  target="_blank">
                                     <span class="pcoded-micon"><i class="ti-vector"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Graph based</span>
                                     <span class="pcoded-mcaret"></span>
@@ -224,8 +211,8 @@
 
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Info</div>
                         <ul class="pcoded-item pcoded-left-item">
-                            <li>
-                                <a href="../genericpages/genericpages?page=publications&term={{ searchTerm }}">
+                            <li >
+                                <a href="../genericpages/genericpages?page=publications&term={{ searchTerm }}"  >
                                     <span class="pcoded-micon"><i class="ti-write"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Publications</span>
                                     <span class="pcoded-mcaret"></span>
@@ -239,7 +226,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="map-google.html">
+                                <a href="map-google.html"  >
                                     <span class="pcoded-micon"><i class="ti-comments"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Feedback</span>
                                     <span class="pcoded-mcaret"></span>
@@ -255,157 +242,137 @@
                             <div class="page-wrapper" id="MessageBox">
 
 
-                                <div class="page-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card">
-                                                <div class="card-header">
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="card">
+                                                    <div class="card-header">
 
-                                                    <h5 class="m-b-10 titleTrimming">
-                                                        Researchers
-                                                    </h5>
-                                                    <div class="card-header-right">
-                                                        <ul class="list-unstyled card-option">
-                                                            <li><i class="fa fa-chevron-left"></i></li>
-                                                            <li><i class="fa fa-window-maximize full-card"></i></li>
-                                                            <li><i class="fa fa-minus minimize-card"></i></li>
-                                                            <li><i class="fa fa-refresh reload-card"></i></li>
-                                                            <li><i class="fa fa-times close-card"></i></li>
-                                                        </ul>
+                                                        <h5 class="m-b-10 titleTrimming">
+                                                            Researchers
+                                                        </h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa-chevron-left"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-times close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div style="display:inline-block; text-align:left; padding-right:20px;">
+                                                            <a href="https://siamakfarshidi.nl/" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Siamak Farshidi</b> </span>(University of Amsterdam)
+                                                            </a>
+                                                            <br>
+                                                            <a href="https://www.linkedin.com/in/peterthijsse/?originalSubdomain=nl" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Peter Thijsse</b> </span>(MARiene Informatie Service)
+                                                            </a>
+                                                            <br>
+                                                            <a href="https://www.University of Amsterdam.nl/en/profile/l/i/n.li/n.li.html?cb" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Na Li</b> </span>(University of Amsterdam)
+                                                            </a>
+                                                            <br>
+                                                            <a href="https://nl.linkedin.com/in/yuxue-liu-7b7872195" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Yuxue Liu </b> </span>(University of Amsterdam)
+                                                            </a>
+                                                            <br>
+                                                            <a href="https://at.linkedin.com/in/barbara-magagna-2794ba42" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Barbara Magagna</b> </span>(Environment Agency Austria)
+                                                            </a>
+                                                            <br>
+                                                            <a href="http://markusstocker.com/" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Markus Stocker</b> </span>(TIB - Leibniz Information, Centre for Science and Technology)
+                                                            </a>
+                                                            <br>
+                                                            <a href="https://www.linkedin.com/in/keith-jeffery-792ba069/?originalSubdomain=uk" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Keith Jeffery</b> </span>(British Geological Survey UK)
+                                                            </a>
+                                                            <br>
+                                                            <a href="#" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Christian Pichot</b> </span>(French National Institute for Agriculture Food, and Environment)
+                                                            </a>
+                                                            <br>
+                                                            <a href="https://www.uva.nl/en/profile/z/h/z.zhao/z.zhao.html" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Zhiming Zhao</b> </span>(University of Amsterdam)
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-block">
-                                                    <div style="display:inline-block; text-align:left; padding-right:20px;">
-                                                        <a href="https://siamakfarshidi.nl/" target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Siamak Farshidi</b> </span>(University
-                                                            of Amsterdam)
-                                                        </a>
-                                                        <br>
-                                                        <a href="https://www.linkedin.com/in/peterthijsse/?originalSubdomain=nl"
-                                                           target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Peter Thijsse</b> </span>(MARiene
-                                                            Informatie Service)
-                                                        </a>
-                                                        <br>
-                                                        <a href="https://www.University of Amsterdam.nl/en/profile/l/i/n.li/n.li.html?cb"
-                                                           target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Na Li</b> </span>(University
-                                                            of Amsterdam)
-                                                        </a>
-                                                        <br>
-                                                        <a href="https://nl.linkedin.com/in/yuxue-liu-7b7872195"
-                                                           target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Yuxue Liu </b> </span>(University
-                                                            of Amsterdam)
-                                                        </a>
-                                                        <br>
-                                                        <a href="https://at.linkedin.com/in/barbara-magagna-2794ba42"
-                                                           target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Barbara Magagna</b> </span>(Environment
-                                                            Agency Austria)
-                                                        </a>
-                                                        <br>
-                                                        <a href="http://markusstocker.com/" target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Markus Stocker</b> </span>(TIB
-                                                            - Leibniz Information, Centre for Science and Technology)
-                                                        </a>
-                                                        <br>
-                                                        <a href="https://www.linkedin.com/in/keith-jeffery-792ba069/?originalSubdomain=uk"
-                                                           target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Keith Jeffery</b> </span>(British
-                                                            Geological Survey UK)
-                                                        </a>
-                                                        <br>
-                                                        <a href="#" target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Christian Pichot</b> </span>(French
-                                                            National Institute for Agriculture Food, and Environment)
-                                                        </a>
-                                                        <br>
-                                                        <a href="https://www.uva.nl/en/profile/z/h/z.zhao/z.zhao.html"
-                                                           target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Zhiming Zhao</b> </span>(University
-                                                            of Amsterdam)
-                                                        </a>
+                                                <div class="card">
+                                                    <div class="card-header">
+
+                                                        <h5 class="m-b-10 titleTrimming">
+                                                            Former Members:
+                                                        </h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa-chevron-left"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-times close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div style="display:inline-block; text-align:left; padding-right:20px;">
+                                                            <a href="#" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Xiaofeng Liao</b> </span>(University of Amsterdam)
+                                                            </a>
+                                                            <br>
+                                                            <a href="#" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Maxim Vitalis</b> </span>(University of Amsterdam)
+                                                            </a>                                                            <br>
+                                                            <a href="#" target="_blank">
+                                                                <span style="width:200px; display:inline-block;"><b>Doron Goldfarb</b> </span>(Environment Agency Austria)
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="card">
+                                                    <div class="card-header">
+
+                                                        <h5 class="m-b-10 titleTrimming">
+                                                            Partners:
+                                                        </h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa-chevron-left"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-times close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div style="width:150px;display:inline-block; text-align:center; padding-right:20px;">
+                                                            <a href="https://www.lifewatch.eu/" target="_blank">
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/LifeWatchERIC.png' %}" style="width:100%" />
+                                                            </a>
+                                                        </div>
+                                                        <div style="width:150px;display:inline-block; text-align:center; padding-right:20px;">
+                                                            <a href="https://envri.eu/home-envri-fair/" target="_blank">
+                                                                <img src="{% static 'images/ENVRI-Collection/envri_logo_final.png' %}" style="height:70px;" />
+                                                            </a>
+                                                        </div>
+                                                        <div style="width:150px;display:inline-block; text-align:center; padding-right:20px;">
+                                                            <a href="https://www.uva.nl/en" target="_blank">
+                                                                <img src="{% static 'images/ENVRI-Collection/university-of-amster.png' %}" style="height:100px;" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
                                             </div>
-                                            <div class="card">
-                                                <div class="card-header">
-
-                                                    <h5 class="m-b-10 titleTrimming">
-                                                        Former Members:
-                                                    </h5>
-                                                    <div class="card-header-right">
-                                                        <ul class="list-unstyled card-option">
-                                                            <li><i class="fa fa-chevron-left"></i></li>
-                                                            <li><i class="fa fa-window-maximize full-card"></i></li>
-                                                            <li><i class="fa fa-minus minimize-card"></i></li>
-                                                            <li><i class="fa fa-refresh reload-card"></i></li>
-                                                            <li><i class="fa fa-times close-card"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="card-block">
-                                                    <div style="display:inline-block; text-align:left; padding-right:20px;">
-                                                        <a href="#" target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Xiaofeng Liao</b> </span>(University
-                                                            of Amsterdam)
-                                                        </a>
-                                                        <br>
-                                                        <a href="#" target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Maxim Vitalis</b> </span>(University
-                                                            of Amsterdam)
-                                                        </a> <br>
-                                                        <a href="#" target="_blank">
-                                                            <span style="width:200px; display:inline-block;"><b>Doron Goldfarb</b> </span>(Environment
-                                                            Agency Austria)
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="card">
-                                                <div class="card-header">
-
-                                                    <h5 class="m-b-10 titleTrimming">
-                                                        Partners:
-                                                    </h5>
-                                                    <div class="card-header-right">
-                                                        <ul class="list-unstyled card-option">
-                                                            <li><i class="fa fa-chevron-left"></i></li>
-                                                            <li><i class="fa fa-window-maximize full-card"></i></li>
-                                                            <li><i class="fa fa-minus minimize-card"></i></li>
-                                                            <li><i class="fa fa-refresh reload-card"></i></li>
-                                                            <li><i class="fa fa-times close-card"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="card-block">
-                                                    <div style="width:150px;display:inline-block; text-align:center; padding-right:20px;">
-                                                        <a href="https://www.lifewatch.eu/" target="_blank">
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/LifeWatchERIC.png' %}"
-                                                                 style="width:100%"/>
-                                                        </a>
-                                                    </div>
-                                                    <div style="width:150px;display:inline-block; text-align:center; padding-right:20px;">
-                                                        <a href="https://envri.eu/home-envri-fair/" target="_blank">
-                                                            <img src="{% static 'images/ENVRI-Collection/envri_logo_final.png' %}"
-                                                                 style="height:70px;"/>
-                                                        </a>
-                                                    </div>
-                                                    <div style="width:150px;display:inline-block; text-align:center; padding-right:20px;">
-                                                        <a href="https://www.uva.nl/en" target="_blank">
-                                                            <img src="{% static 'images/ENVRI-Collection/university-of-amster.png' %}"
-                                                                 style="height:100px;"/>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                         <div id="styleSelector">
@@ -419,18 +386,18 @@
 </div>
 {% csrf_token %}
 
-<script src="{% static 'js/jquery/jquery.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/jquery-ui/jquery-ui.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/popper.js/popper.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap/js/bootstrap.min.js' %}"></script>
 <!-- jquery slimscroll js -->
-<script src="{% static 'js/jquery-slimscroll/jquery.slimscroll.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
 <!-- modernizr js -->
-<script src="{% static 'js/modernizr/modernizr.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/modernizr/css-scrollbars.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/modernizr.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/css-scrollbars.js' %}"></script>
 
 <!-- Custom js -->
-<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 <script src="{% static 'js/pcoded.min.js' %}"></script>
 <script src="{% static 'js/vartical-demo.js' %}"></script>
 <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
@@ -598,7 +565,6 @@ function modifyCart(data) {
   $('#MyCartCount').text(cnt);
 }
 {{functionList|safe}}
-
 </script>
 </body>
 </html>

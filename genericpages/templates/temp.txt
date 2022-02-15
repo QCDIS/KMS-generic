@@ -1,4 +1,4 @@
-<ul class="nav-right">
+                <ul class="nav-right">
                     <li class="header-notification">
                         <a href="#!">
                             <i class="ti-bell"></i>
