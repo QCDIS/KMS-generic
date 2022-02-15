@@ -51,12 +51,12 @@ class Particle {
 
     draw() {
         ctx.beginPath();
-        //draw a circle and fill it
-        //at posX, posY ,of size, fromAngle 0rad ,to 2pi Rad
+        //draw a circle and fill it 
+        //at posX, posY ,of size, fromAngle 0rad ,to 2pi Rad 
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
         ctx.fillStyle = "#415DFE"
         ctx.fill();
-
+        
     }
 
     update() {
@@ -74,7 +74,7 @@ class Particle {
         if (dist < mouse.radius + this.size) {
             //Buffers on edge of the screens
             const buffer=this.size * 10
-
+            
             if (mouse.x < this.x && this.x < canvas.width - buffer) {
                 this.x += 10;
             }
@@ -99,10 +99,10 @@ class Particle {
 function createParticles() {
     particlesArray = [];
     let noOfParticles = canvas.width * canvas.height / 5000;
-
+    
     for (let i = 0; i < noOfParticles; i++) {
         let size = (Math.random() * 5) + 1;
-
+        
         let x = (Math.random() * (innerWidth - 2 * size ) + 2 * size);
         let y = (Math.random() * (innerHeight - 2 * size ) + 2 * size);
         let velX = (Math.random() * 5) - 2.5;
@@ -114,14 +114,14 @@ function createParticles() {
     }
 }
 function connect(){
-
+    
     let vicinityDist= canvas.width*canvas.height/81;
     for(let i=0;i<particlesArray.length;i++){
         for(let j=i;j<particlesArray.length;j++){
-            let distance= Math.pow(particlesArray[i].x-particlesArray[j].x,2)
+            let distance= Math.pow(particlesArray[i].x-particlesArray[j].x,2) 
                         + Math.pow(particlesArray[i].y-particlesArray[j].y,2);
 
-            let opacity=1-distance/25000;
+            let opacity=1-distance/25000;            
             //actually the square of distance
 
             if (distance < vicinityDist){
@@ -133,7 +133,7 @@ function connect(){
                 ctx.lineTo(particlesArray[j].x,particlesArray[j].y);
                 ctx.stroke();
 
-            }
+            }            
         }
     }
 }

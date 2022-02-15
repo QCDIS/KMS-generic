@@ -180,7 +180,7 @@ const cuteToast = ({ type, message, timer = 5000,  vibrate = [], playSound = nul
       <div>
         <div class="toast-frame">
           <div class="toast-body">
-
+            
             ${img !== '' ? '<img class="toast-body-img" src="' + src + '/' + img + '" />' : ''}
             <div class="toast-body-content">
               <span class="toast-title">${title}</span>

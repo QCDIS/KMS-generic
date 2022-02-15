@@ -12,28 +12,25 @@
     <![endif]-->
     <!-- Meta -->
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" name="viewport">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="Gradient Able Bootstrap admin template made using Bootstrap 4. The starter version of Gradient Able is completely free for personal project."
-          name="description"/>
-    <meta content="flat ui, admin , Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app"
-          name="keywords">
-    <meta content="codedthemes" name="author">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Gradient Able Bootstrap admin template made using Bootstrap 4. The starter version of Gradient Able is completely free for personal project." />
+    <meta name="keywords" content="flat ui, admin , Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="codedthemes">
     <!-- Favicon icon -->
-    <link href="{% static '/images/envriLOGO.png'%}" rel="icon" type="image/x-icon">
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+    <link rel="icon" href="{% static '/images/envriLOGO.png'%}" type="image/x-icon">
+    <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link href="{% static '/css/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap/css/bootstrap.min.css'%}">
     <!-- themify-icons line icon -->
-    <link href="{% static '/icon/themify-icons/themify-icons.css'%}" rel="stylesheet" type="text/css">
-    <link href="{% static '/icon/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/themify-icons/themify-icons.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/font-awesome/css/font-awesome.min.css'%}">
 
     <!-- ico font -->
-    <link href="{% static '/icon/icofont/css/icofont.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/icofont/css/icofont.css'%}">
     <!-- Style.css -->
-    <link href="{% static '/css/style.css'%}" rel="stylesheet" type="text/css">
-    <link href="{% static '/css/jquery.mCustomScrollbar.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery.mCustomScrollbar.css'%}">
 
     <style>
         h5.titleTrimming {
@@ -46,10 +43,10 @@
     .show-read-more .more-text{
         display: none;
     }
-
-    </style>
+</style>
 
 </head>
+
 
 
 <body>
@@ -61,14 +58,14 @@
     </div>
 </div>
 <!-- Pre-loader end -->
-<div class="pcoded" id="pcoded">
+<div id="pcoded" class="pcoded">
     <div class="pcoded-overlay-box"></div>
     <div class="pcoded-container navbar-wrapper">
 
         <nav class="navbar header-navbar pcoded-header">
             <div class="navbar-wrapper">
                 <div class="navbar-logo">
-                    <a class="mobile-menu" href="#!" id="mobile-collapse">
+                    <a class="mobile-menu" id="mobile-collapse" href="#!">
                         <i class="ti-menu"></i>
                     </a>
                     <div class="mobile-search">
@@ -76,15 +73,14 @@
                             <div class="main-search morphsearch-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                    <input class="form-control" placeholder="Enter Keyword" type="text">
-                                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                                    <span class="input-group-addon search-btn"><i class="ti-search" ></i></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <a href="../genericpages/genericpages?page=home">
-                        <img alt="Theme-Logo" class="img-fluid"
-                             src="{% static 'images/ENVRI-WHITE-LOGO.png' %}" style="width:65px;  padding:6px;margin-top:-5px;"/>
+                        <img class="img-fluid" src="{% static 'images/ENVRI-WHITE-LOGO.png' %}" style="width:65px;  padding:6px;margin-top:-5px;" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options">
                         <i class="ti-more"></i>
@@ -100,9 +96,8 @@
                             <div class="main-search morphsearch-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                    <input class="form-control" id="searchbox1" name="searchbox1" onchange="search(1);"
-                                           type="text">
-                                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    <input type="text" class="form-control" id="searchbox1" name="searchbox1" onchange="search(1);">
+                                    <span class="input-group-addon search-btn" ><i class="ti-search"></i></span>
                                 </div>
                             </div>
                         </li>
@@ -115,16 +110,13 @@
                     <ul class="nav-right">
                         <li class="header-notification">
                             <a href="#!">
-                                <i class="ti-shopping-cart" style="font-size:15pt; "></i>
-                                <span style="display: inline-block;font-size:10pt;font-weight:bold;"> <sup><span
-                                        id="MyCartCount">100</span></sup>  </span>
+                                <i style="font-size:15pt; " class="ti-shopping-cart"></i>
+                                <span style="display: inline-block;font-size:10pt;font-weight:bold;"> <sup><span id="MyCartCount" >100</span></sup>  </span>
                             </a>
                             <ul class="show-notification" id="MyCart">
                                 <li>
                                     <a href="#" onclick="">
-                                        <h6 style="color:blue;"><span class="btn btn-primary btn-icon"
-                                                                      style="font-size:15pt; padding:0px; padding-top:4px; padding-left:2px; height:30px;width:30px; text-align:center; margin-right:5px; margin-left:-10px;"><i
-                                                class="ti-cloud-down"></i></span>
+                                        <h6 style="color:blue;"><span class="btn btn-primary btn-icon" style="font-size:15pt; padding:0px; padding-top:4px; padding-left:2px; height:30px;width:30px; text-align:center; margin-right:5px; margin-left:-10px;"><i  class="ti-cloud-down"></i></span>
                                             My Basket</h6>
                                     </a>
                                 </li>
@@ -133,14 +125,12 @@
 
                         <li class="user-profile header-notification">
                             <a href="#!">
-                                <img alt="User-Profile-Image" class="img-radius"
-                                     src="{% static 'images/GuestICON.png' %}">
+                                <img src="{% static 'images/GuestICON.png' %}" class="img-radius" alt="User-Profile-Image">
                                 <span>Guest</span>
                                 <i class="ti-angle-down"></i>
                             </a>
                             <ul class="show-notification profile-notification">
-                                <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i> Login
-                                </a></li>
+                                <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i> Login </a> </li>
 
                             </ul>
                         </li>
@@ -158,46 +148,44 @@
                         <div class="pcoded-search">
                             <span class="searchbar-toggle">  </span>
                             <div class="pcoded-search-box ">
-                                <input id="searchbox2" name="searchbox2" onchange="search(2);" placeholder="Search"
-                                       type="text">
-                                <span class="search-icon"><i aria-hidden="true" class="ti-search"
-                                                             onclick="search(2);"></i></span>
+                                <input type="text" placeholder="Search" id="searchbox2" name="searchbox2" onchange="search(2);">
+                                <span class="search-icon" ><i class="ti-search" aria-hidden="true" onclick="search(2);"></i></span>
                             </div>
                         </div>
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Search Space</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="">
-                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1" >
                                     <span class="pcoded-micon"><i class="ti-world"></i><b>D</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Webpages</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../dataset_elastic/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../dataset_elastic/genericsearch?term={{ searchTerm }}&page=1" >
                                     <span class="pcoded-micon"><i class="ti-ruler-pencil"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Datasets</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Datasets</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../webAPI/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../webAPI/genericsearch?term={{ searchTerm }}&page=1" >
                                     <span class="pcoded-micon"><i class="ti-control-shuffle"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Web APIs</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Web APIs</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../notebookSearch/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../notebookSearch/genericsearch?term={{ searchTerm }}&page=1" >
                                     <span class="pcoded-micon"><i class="ti-package"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Notebooks</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Notebooks</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
                                 <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1&searchtype=imagesearch">
                                     <span class="pcoded-micon"><i class="ti-gallery"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Images</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Images</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
@@ -205,8 +193,7 @@
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Visualization</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li>
-                                <a href="../genericpages/genericpages?page=graphV&term={{ searchTerm }}"
-                                   target="_blank">
+                                <a href="../genericpages/genericpages?page=graphV&term={{ searchTerm }}" target="_blank">
                                     <span class="pcoded-micon"><i class="ti-vector"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Graph based</span>
                                     <span class="pcoded-mcaret"></span>
@@ -232,14 +219,14 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../genericpages/genericpages?page=RnD&term={{ searchTerm }}">
+                                <a href="../genericpages/genericpages?page=RnD&term={{ searchTerm }}" >
                                     <span class="pcoded-micon"><i class="ti-user"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">R&amp;D team</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" >
                                     <span class="pcoded-micon"><i class="ti-comments"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Feedback</span>
                                     <span class="pcoded-mcaret"></span>
@@ -255,69 +242,54 @@
                             <div class="page-wrapper" id="MessageBox">
 
 
-                                <div class="page-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card">
-                                                <div class="card-header">
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="card">
+                                                    <div class="card-header">
 
-                                                    <h5 class="m-b-10 titleTrimming">
+                                                        <h5 class="m-b-10 titleTrimming">
 
-                                                    </h5>
-                                                    <div class="card-header-right">
-                                                        <ul class="list-unstyled card-option">
-                                                            <li><i class="fa fa-chevron-left"></i></li>
-                                                            <li><i class="fa fa-window-maximize full-card"></i></li>
-                                                            <li><i class="fa fa-minus minimize-card"></i></li>
-                                                            <li><i class="fa fa-refresh reload-card"></i></li>
-                                                            <li><i class="fa fa-times close-card"></i></li>
-                                                        </ul>
+                                                        </h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa-chevron-left"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-times close-card"></i></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="card-block">
-                                                    <ol>
+                                                    <div class="card-block">
+                                                        <ol>
                                                         <li style=" padding-bottom: 10px;">
-                                                            S. Farshidi and Z. Zhao, <b>An adaptable indexing pipeline
-                                                            for enriching meta information of datasets from
-                                                            heterogeneous repositories</b> (2022).
-                                                            Pacific-Asia Conference on Knowledge Discovery and Data
-                                                            Mining (PAKDD)
+                                                            S. Farshidi and Z. Zhao, <b>An adaptable indexing pipeline for enriching meta information of datasets from heterogeneous repositories</b> (2022).
+                                                            Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)
                                                         </li>
                                                         <li style=" padding-bottom: 10px;">
-                                                            L. Poon, S. Farshidi, N. Li and Z. Zhao, <b>Unsupervised
-                                                            Anomaly Detection in Data Quality Control </b>
-                                                            (2021). IEEE International Conference on Big Data (Big
-                                                            Data), 2021, pp. 2327-2336,
-                                                            <a href="https://ieeexplore.ieee.org/document/9671672"
-                                                               target="_blank">
+                                                            L. Poon, S. Farshidi, N. Li and Z. Zhao,  <b>Unsupervised Anomaly Detection in Data Quality Control </b>
+                                                            (2021). IEEE International Conference on Big Data (Big Data), 2021, pp. 2327-2336,
+                                                            <a  href="https://ieeexplore.ieee.org/document/9671672" target="_blank">
                                                                 doi: 10.1109/BigData52589.2021.9671672 </a>
                                                         </li>
                                                         <li style="padding-bottom: 10px;">
-                                                            Z. Zhao, S. Koulouzis, R. Bianchi, S. Farshidi, Z. Shi, R.
-                                                            Xin, ..., and W. D. Kissling
-                                                            (2021). <b>Notebook-as-a-VRE (NaaVRE): from private
-                                                            notebooks to a
-                                                            collaborative cloud virtual research environment </b>. <a
-                                                                href="https://arxiv.org/pdf/2111.12785.pdf"
-                                                                target="_blank"> arXiv preprint arXiv:2111.12785.
-                                                        </a>
+                                                            Z. Zhao, S. Koulouzis, R. Bianchi, S. Farshidi, Z. Shi,  R. Xin, ..., and W. D. Kissling
+                                                            (2021). <b>Notebook-as-a-VRE (NaaVRE): from private notebooks to a
+                                                            collaborative cloud virtual research environment </b>.  <a href="https://arxiv.org/pdf/2111.12785.pdf" target="_blank"> arXiv preprint arXiv:2111.12785.
+                                                           </a>
                                                         </li>
-                                                        <li style="font-size: small;  padding-bottom: 10px;">
-                                                            S. Farshidi, X. Liao, N. Li, D. Goldfarb, B. Magagna, M.
-                                                            Stocker, ..., and Z. Zhao (2021).
-                                                            <b>Knowledge sharing and discovery across heterogeneous
-                                                                research infrastructures </b>.
-                                                            Open Research Europe, 1(68), 68. <a
-                                                                href="https://open-research-europe.ec.europa.eu/articles/1-68/v2"
-                                                                target="_blank"> doi:
-                                                            10.12688/openreseurope.13677.2 </a>
+                                                            <li style="font-size: small;  padding-bottom: 10px;">
+                                                                S. Farshidi, X. Liao, N. Li, D. Goldfarb, B. Magagna, M. Stocker, ..., and Z. Zhao (2021).
+                                                            <b>Knowledge sharing and discovery across heterogeneous research infrastructures </b>.
+                                                            Open Research Europe, 1(68), 68. <a href="https://open-research-europe.ec.europa.eu/articles/1-68/v2" target="_blank"> doi: 10.12688/openreseurope.13677.2 </a>
                                                         </li>
-                                                    </ol>
+                                                        </ol>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                         <div id="styleSelector">
@@ -331,18 +303,18 @@
 </div>
 {% csrf_token %}
 
-<script src="{% static 'js/jquery/jquery.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/jquery-ui/jquery-ui.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/popper.js/popper.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap/js/bootstrap.min.js' %}"></script>
 <!-- jquery slimscroll js -->
-<script src="{% static 'js/jquery-slimscroll/jquery.slimscroll.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
 <!-- modernizr js -->
-<script src="{% static 'js/modernizr/modernizr.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/modernizr/css-scrollbars.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/modernizr.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/css-scrollbars.js' %}"></script>
 
 <!-- Custom js -->
-<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 <script src="{% static 'js/pcoded.min.js' %}"></script>
 <script src="{% static 'js/vartical-demo.js' %}"></script>
 <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
@@ -510,7 +482,23 @@ function modifyCart(data) {
   $('#MyCartCount').text(cnt);
 }
 {{functionList|safe}}
-
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,13 +1,14 @@
 import logging
 from urllib.parse import urljoin
-
 import requests
 from bs4 import BeautifulSoup
+import requests
+import lxml
+
 
 logging.basicConfig(
     format='%(asctime)s %(levelname)s:%(message)s',
     level=logging.INFO)
-
 
 class Crawler:
 
@@ -19,7 +20,7 @@ class Crawler:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE'
         }
-        f = requests.get(url, headers=headers)
+        f = requests.get(url, headers = headers)
         soup = BeautifulSoup(f.content, 'lxml')
         return soup
 
@@ -27,10 +28,11 @@ class Crawler:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE'
         }
-        f = requests.get(url, headers=headers)
+        f = requests.get(url, headers = headers)
         soup = BeautifulSoup(f.content, 'lxml')
-        returnResult = soup.find_all(tag)
+        returnResult=soup.find_all(tag)
         return returnResult
+
 
     def download_url(self, url):
         return requests.get(url).text
@@ -62,3 +64,4 @@ class Crawler:
                 logging.exception(f'Failed to crawl: {url}')
             finally:
                 self.visited_urls.append(url)
+

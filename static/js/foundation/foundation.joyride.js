@@ -206,7 +206,7 @@
     },
 
     create : function (opts) {
-      var buttonText = opts.$li.attr(this.add_namespace('data-button'))
+      var buttonText = opts.$li.attr(this.add_namespace('data-button')) 
         || opts.$li.attr(this.add_namespace('data-text')),
         tipClass = opts.$li.attr('class'),
         $tip_content = $(this.tip_template({

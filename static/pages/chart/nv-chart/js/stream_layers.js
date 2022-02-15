@@ -32,3 +32,4 @@ function stream_waves(n, m) {
 function stream_index(d, i) {
   return {x: i, y: Math.max(0, d)};
 }
+

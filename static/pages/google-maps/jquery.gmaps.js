@@ -20,7 +20,7 @@ $(document).ready(function(){
         el: '#markermap',
         lat: 34.043333,
         lng: -78.028333
-
+        
       });
       map.addMarker({
         lat: 34.042,
@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 
 
-
+    
 
 
 // Polygonal
@@ -155,7 +155,7 @@ $(document).ready(function(){
 //           el: "#styledmap",
 //           lat: 41.895465,
 //           lng: 12.482324,
-//           zoom: 5,
+//           zoom: 5, 
 //           zoomControl : true,
 //           zoomControlOpt: {
 //             style : "SMALL",
@@ -166,7 +166,7 @@ $(document).ready(function(){
 //           mapTypeControl: false,
 //           overviewMapControl: false
 //         });
-
+        
 //         var styles = [
 //             {
 //               stylers: [
@@ -188,12 +188,12 @@ $(document).ready(function(){
 //               ]
 //             }
 //         ];
-
+        
 //         map.addStyle({
 //             styledMapName:"Styled Map",
 //             styles: styles,
-//             mapTypeId: "map_style"
+//             mapTypeId: "map_style"  
 //         });
-
+        
 //         map.setStyle("map_style");
 //       });

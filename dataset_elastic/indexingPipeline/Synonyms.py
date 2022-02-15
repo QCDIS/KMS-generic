@@ -1,18 +1,16 @@
 import nltk
 from nltk.corpus import wordnet
 
-
 def download_nltk_dependencies_if_needed():
-    nltk.data.path.append("var/www/nltk_data")
+    nltk.data.path.append("/var/www/nltk_data")
     try:
         nltk.word_tokenize('foobar')
     except LookupError:
-        nltk.download('punkt', download_dir='var/www/nltk_data')
+        nltk.download('punkt', download_dir='/var/www/nltk_data')
     try:
         nltk.pos_tag(nltk.word_tokenize('foobar'))
     except LookupError:
-        nltk.download('averaged_perceptron_tagger', download_dir='var/www/nltk_data')
-
+        nltk.download('averaged_perceptron_tagger', download_dir='/var/www/nltk_data')
 
 def get_some_word_synonyms(word):
     word = word.lower()
@@ -28,7 +26,6 @@ def get_some_word_synonyms(word):
             synonyms.append(lemma_name)
     return synonyms
 
-
 def get_all_word_synonyms(word):
     word = word.lower()
     synonyms = []
@@ -43,14 +40,13 @@ def get_all_word_synonyms(word):
                 synonyms.append(lemma_name)
     return synonyms
 
-
 download_nltk_dependencies_if_needed()
 
 
 def getSynonyms(words):
-    lstSynonyms = []
+    lstSynonyms=[]
     for word in words:
-        synonyms = get_some_word_synonyms(word)
+        synonyms=get_some_word_synonyms(word)
         for synonym in synonyms:
             lstSynonyms.append(synonym)
     return lstSynonyms
