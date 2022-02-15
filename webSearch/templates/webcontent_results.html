@@ -12,31 +12,27 @@
     <![endif]-->
     <!-- Meta -->
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" name="viewport">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="Gradient Able Bootstrap admin template made using Bootstrap 4. The starter version of Gradient Able is completely free for personal project."
-          name="description"/>
-    <meta content="flat ui, admin , Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app"
-          name="keywords">
-    <meta content="codedthemes" name="author">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Gradient Able Bootstrap admin template made using Bootstrap 4. The starter version of Gradient Able is completely free for personal project." />
+    <meta name="keywords" content="flat ui, admin , Flat ui, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="codedthemes">
     <!-- Favicon icon -->
-    <link href="{% static '/images/envriLOGO.png'%}" rel="icon" type="image/x-icon">
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+    <link rel="icon" href="{% static '/images/envriLOGO.png'%}" type="image/x-icon">
+    <!-- Google font--><link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link href="{% static '/css/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap/css/bootstrap.min.css'%}">
     <!-- themify-icons line icon -->
-    <link href="{% static '/icon/themify-icons/themify-icons.css'%}" rel="stylesheet" type="text/css">
-    <link href="{% static '/icon/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/themify-icons/themify-icons.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/font-awesome/css/font-awesome.min.css'%}">
 
     <!-- ico font -->
-    <link href="{% static '/icon/icofont/css/icofont.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/icon/icofont/css/icofont.css'%}">
     <!-- Style.css -->
-    <link href="{% static '/css/style.css'%}" rel="stylesheet" type="text/css">
-    <link href="{% static '/css/jquery.mCustomScrollbar.css'%}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/jquery.mCustomScrollbar.css'%}">
 
-    <link href="{% static '/starRating/starability-minified/starability-all.min.css'%}" rel="stylesheet"
-          type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/starRating/starability-minified/starability-all.min.css'%}"/>
 
     <style>
         h5.titleTrimming {
@@ -49,22 +45,21 @@
     .show-read-more .more-text{
         display: none;
     }
+</style>
 
-    </style>
-
-    <link href="{% static '/notification/style.css'%}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static '/notification/style.css'%}" />
     <script src="{% static '/notification/cute-alert.js'%}"></script>
 
-    <link href="{% static '/splashScreen/styles.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/splashScreen/styles.css'%}">
     <style>
 		/* This only works with JavaScript,
 		   if it's not present, don't show loader */
 		.no-js #canvas1 { display: none;  }
 		.js #canvas1 { display: block; position: absolute; left: 100px; top: 0; }
-
-    </style>
+	</style>
 
 </head>
+
 
 
 <body>
@@ -78,14 +73,14 @@
     </div>
 </div>
 <!-- Pre-loader end -->
-<div class="pcoded" id="pcoded">
+<div id="pcoded" class="pcoded">
     <div class="pcoded-overlay-box"></div>
     <div class="pcoded-container navbar-wrapper">
 
         <nav class="navbar header-navbar pcoded-header">
             <div class="navbar-wrapper">
                 <div class="navbar-logo">
-                    <a class="mobile-menu" href="#!" id="mobile-collapse">
+                    <a class="mobile-menu" id="mobile-collapse" href="#!">
                         <i class="ti-menu"></i>
                     </a>
                     <div class="mobile-search">
@@ -93,15 +88,14 @@
                             <div class="main-search morphsearch-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                    <input class="form-control" placeholder="Enter Keyword" type="text">
-                                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                                    <span class="input-group-addon search-btn"><i class="ti-search" ></i></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <a href="../genericpages/genericpages?page=home">
-                        <img alt="Theme-Logo" class="img-fluid"
-                             src="{% static 'images/ENVRI-WHITE-LOGO.png' %}" style="width:65px;  padding:6px;margin-top:-5px;"/>
+                        <img class="img-fluid" src="{% static 'images/ENVRI-WHITE-LOGO.png' %}" style="width:65px;  padding:6px;margin-top:-5px;" alt="Theme-Logo" />
                     </a>
                     <a class="mobile-options">
                         <i class="ti-more"></i>
@@ -117,9 +111,8 @@
                             <div class="main-search morphsearch-search">
                                 <div class="input-group">
                                     <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                    <input class="form-control" id="searchbox1" name="searchbox1" onchange="search(1);"
-                                           type="text">
-                                    <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                    <input type="text" class="form-control" id="searchbox1" name="searchbox1" onchange="search(1);">
+                                    <span class="input-group-addon search-btn" ><i class="ti-search"></i></span>
                                 </div>
                             </div>
                         </li>
@@ -132,17 +125,14 @@
                     <ul class="nav-right">
                         <li class="header-notification">
                             <a href="#!">
-                                <i class="ti-shopping-cart" style="font-size:15pt; "></i>
-                                <span style="display: inline-block;font-size:10pt;font-weight:bold;"> <sup><span
-                                        id="MyCartCount">100</span></sup>  </span>
+                                <i style="font-size:15pt; " class="ti-shopping-cart"></i>
+                                <span style="display: inline-block;font-size:10pt;font-weight:bold;"> <sup><span id="MyCartCount" >100</span></sup>  </span>
                             </a>
                             <ul class="show-notification" id="MyCart">
                                 <li>
                                     <a href="#" onclick="">
-                                        <h6 style="color:blue;"><span class="btn btn-primary btn-icon"
-                                                                      style="font-size:15pt; padding:0px; padding-top:4px; padding-left:2px; height:30px;width:30px; text-align:center; margin-right:5px; margin-left:-10px;"><i
-                                                class="ti-cloud-down"></i></span>
-                                            My Basket</h6>
+                                        <h6 style="color:blue;"><span class="btn btn-primary btn-icon" style="font-size:15pt; padding:0px; padding-top:4px; padding-left:2px; height:30px;width:30px; text-align:center; margin-right:5px; margin-left:-10px;"><i  class="ti-cloud-down"></i></span>
+                                        My Basket</h6>
                                     </a>
                                 </li>
                             </ul>
@@ -150,14 +140,12 @@
 
                         <li class="user-profile header-notification">
                             <a href="#!">
-                                <img alt="User-Profile-Image" class="img-radius"
-                                     src="{% static 'images/GuestICON.png' %}">
+                                <img src="{% static 'images/GuestICON.png' %}" class="img-radius" alt="User-Profile-Image">
                                 <span>Guest</span>
                                 <i class="ti-angle-down"></i>
                             </a>
                             <ul class="show-notification profile-notification">
-                                <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i> Login
-                                </a></li>
+                                <li><a href="../accountManagement/login"><i class="ti-layout-sidebar-left"></i> Login </a> </li>
 
                             </ul>
                         </li>
@@ -174,10 +162,8 @@
                         <div class="pcoded-search">
                             <span class="searchbar-toggle">  </span>
                             <div class="pcoded-search-box ">
-                                <input id="searchbox2" name="searchbox2" onchange="search(2);" placeholder="Search"
-                                       type="text">
-                                <span class="search-icon"><i aria-hidden="true" class="ti-search"
-                                                             onclick="search(2);"></i></span>
+                                <input type="text" placeholder="Search" id="searchbox2" name="searchbox2" onchange="search(2);">
+                                <span class="search-icon" ><i class="ti-search" aria-hidden="true" onclick="search(2);"></i></span>
                             </div>
                         </div>
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Search Space</div>
@@ -199,9 +185,8 @@
                                          </span>
                                     {% endif %}
                                     {%for facet in facets.ResearchInfrastructure%}
-                                    <li class=" ">
-                                        <a href="#"
-                                           onclick="facetSearch('researchInfrastructure.acronym','{{facet.key}}');">
+                                    <li class=" " >
+                                        <a href="#"  onclick="facetSearch('researchInfrastructure.acronym','{{facet.key}}');">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                             <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">
                                                     {{ facet.key|truncatechars:15 }}
@@ -217,8 +202,8 @@
                                          </span>
                                     {% endif %}
                                     {%for facet in facets.locations %}
-                                    <li class=" ">
-                                        <a href="#" onclick="facetSearch('locations','{{facet.key}}');">
+                                    <li class=" " >
+                                        <a href="#"  onclick="facetSearch('locations','{{facet.key}}');">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                             <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">
                                                     {{ facet.key|truncatechars:15 }}
@@ -234,7 +219,7 @@
                                          </span>
                                     {% endif %}
                                     {%for facet in facets.workOfArt %}
-                                    <li class=" ">
+                                    <li class=" " >
                                         <a href="#" onclick="facetSearch('workOfArt','{{facet.key}}');">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                             <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">
@@ -317,30 +302,30 @@
                                 </ul>
                             </li>
                             <li class="">
-                                <a href="../dataset_elastic/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../dataset_elastic/genericsearch?term={{ searchTerm }}&page=1"  >
                                     <span class="pcoded-micon"><i class="ti-ruler-pencil"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Datasets</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Datasets</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../webAPI/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../webAPI/genericsearch?term={{ searchTerm }}&page=1"  >
                                     <span class="pcoded-micon"><i class="ti-control-shuffle"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Web APIs</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Web APIs</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../notebookSearch/genericsearch?term={{ searchTerm }}&page=1">
+                                <a href="../notebookSearch/genericsearch?term={{ searchTerm }}&page=1" >
                                     <span class="pcoded-micon"><i class="ti-package"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Notebooks</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Notebooks</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1&searchtype=imagesearch">
+                                <a href="../webSearch/genericsearch?term={{ searchTerm }}&page=1&searchtype=imagesearch" >
                                     <span class="pcoded-micon"><i class="ti-gallery"></i></span>
-                                    <span class="pcoded-mtext" data-i18n="nav.dash.main">Images</span>
+                                    <span class="pcoded-mtext"  data-i18n="nav.dash.main">Images</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
@@ -348,8 +333,7 @@
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Visualization</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li>
-                                <a href="../genericpages/genericpages?page=graphV&term={{ searchTerm }}"
-                                   target="_blank">
+                                <a href="../genericpages/genericpages?page=graphV&term={{ searchTerm }}" target="_blank">
                                     <span class="pcoded-micon"><i class="ti-vector"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Graph based</span>
                                     <span class="pcoded-mcaret"></span>
@@ -367,21 +351,21 @@
                         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Info</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li>
-                                <a href="../genericpages/genericpages?page=publications&term={{ searchTerm }}">
+                                <a href="../genericpages/genericpages?page=publications&term={{ searchTerm }}" >
                                     <span class="pcoded-micon"><i class="ti-write"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Publications</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../genericpages/genericpages?page=RnD&term={{ searchTerm }}">
+                                <a href="../genericpages/genericpages?page=RnD&term={{ searchTerm }}" >
                                     <span class="pcoded-micon"><i class="ti-user"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">R&amp;D team</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="map-google.html">
+                                <a href="map-google.html" >
                                     <span class="pcoded-micon"><i class="ti-comments"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Feedback</span>
                                     <span class="pcoded-mcaret"></span>
@@ -397,298 +381,215 @@
                             <div class="page-wrapper" id="MessageBox">
                                 <script>sessionStorage.setItem("searchValue", "{{searchTerm}}"); </script>
                                 {% if NumberOfHits == 10000 %}
-                                I found <b> more than {{ NumberOfHits }}</b> results for you!
+                                    I found <b> more than {{ NumberOfHits }}</b> results for you!
                                 {% elif NumberOfHits > 0 %}
-                                I found <b>{{ NumberOfHits}}</b> results for you!
+                                    I found <b>{{ NumberOfHits}}</b> results for you!
                                 {% elif NumberOfHits == 1 %}
-                                I found only <b>one</b> result for you!
+                                    I found only <b>one</b> result for you!
                                 {% else %}
-                                I couldn't find <b>anything</b> based on <b>"{{searchTerm}}"</b> for you!
-                                <br>
-                                {% if suggestedSearchTerm != "" %}
-                                Did you mean:
-                                <b><a href="../webSearch/genericsearch?term={{ suggestedSearchTerm }}&page=1">{{
-                                    suggestedSearchTerm }}</a></b>
-                                {% endif %}
-                                <script>
+                                    I couldn't find <b>anything</b> based on <b>"{{searchTerm}}"</b> for you!
+                                    <br>
+                                    {% if suggestedSearchTerm != "" %}
+                                        Did you mean:
+                                        <b><a href="../webSearch/genericsearch?term={{ suggestedSearchTerm }}&page=1">{{ suggestedSearchTerm }}</a></b>
+                                    {% endif %}
+                                    <script>
                                         //sessionStorage.setItem("SearchFailed","Yes");
                                         sessionStorage.setItem("searchValue", "");
-
-                                </script>
+                                    </script>
                                 {% endif %}
-                                <a href="#" onclick="sendFeedback('webpages', '{{searchTerm}}', 'guestUser');"
-                                   style="color:blue;font-size:xx-small;"> (Feedback)</a>
+                                <a style="color:blue;font-size:xx-small;" href="#" onclick="sendFeedback('webpages', '{{searchTerm}}', 'guestUser');"> (Feedback)</a>
                                 <br>
                                 <br>
                                 {%for resultItem in results %}
 
-                                <div class="page-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card">
-                                                <div class="card-header">
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="card">
+                                                    <div class="card-header">
 
-                                                    <h5 class="m-b-10 titleTrimming">
+                                                        <h5 class="m-b-10 titleTrimming">
 
-                                                        <a href="{{ resultItem.url.0 }}" style="color:darkblue;"
-                                                           target="_blank">
-                                                            <img src="{% static 'images/WebPageICON.png' %}"
-                                                                 style="width:15px; left: 10px; margin-right:6px;"/>
+                                                            <a href="{{ resultItem.url.0 }}" target="_blank"  style="color:darkblue;" >
+                                                                <img src="{% static 'images/WebPageICON.png' %}" style="width:15px; left: 10px; margin-right:6px;"/>
                                                             {%for title in resultItem.title %}
-                                                            {% if title == "" %}
-                                                            {{ resultItem.pageContetnts.0}} .
-                                                            {% else %}
-                                                            {{title}}
-                                                            {% endif %}
+                                                                {% if title == "" %}
+                                                                    {{ resultItem.pageContetnts.0}} .
+                                                                {% else %}
+                                                                    {{title}}
+                                                                {% endif %}
                                                             {% endfor %}
                                                         </a>
-                                                    </h5>
-                                                    <div class="card-header-right">
-                                                        <ul class="list-unstyled card-option">
-                                                            <li><i class="fa fa-chevron-left"></i></li>
-                                                            <li><i class="fa fa-window-maximize full-card"></i></li>
-                                                            <li><i class="fa fa-minus minimize-card"></i></li>
-                                                            <li><i class="fa fa-refresh reload-card"></i></li>
-                                                            <li><i class="fa fa-times close-card"></i></li>
-                                                        </ul>
+                                                        </h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa-chevron-left"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-times close-card"></i></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="card-block">
-                                                    <div style="color:silver; text-decoration:italic; font-size:tiny; text-align: left; width:100%;">
-                                                        {{ resultItem.lastIndexingDate.0 }}
-                                                    </div>
-                                                    <br>
-                                                    <p class="show-read-more" style="font-size:small;">
+                                                    <div class="card-block">
+                                                        <div style="color:silver; text-decoration:italic; font-size:tiny; text-align: left; width:100%;">
+                                                            {{ resultItem.lastIndexingDate.0 }}
+                                                        </div>
+                                                        <br>
+                                                        <p class="show-read-more" style="font-size:small;">
 
-                                                        {%for text in resultItem.pageContetnts %}
-                                                        {{ text }} .
-                                                        {% endfor %}
+                                                            {%for text in resultItem.pageContetnts %}
+                                                                {{ text }} .
+                                                            {% endfor %}
 
-                                                        {%for text in resultItem.organizations %}
-                                                        {{ text }} .
-                                                        {% endfor %}
-                                                    </p>
+                                                            {%for text in resultItem.organizations %}
+                                                                {{ text }} .
+                                                            {% endfor %}
+                                                        </p>
 
-                                                    <div style="width:100%; display:block ;text-align: center;">
-                                                        {% for file in resultItem.files %}
-                                                        <a href=" {{ file.url }}" target="_blank">
-                                                            {% if file.extension == "pdf" %}
-                                                            <img alt="{{ file.description.0 }}"
-                                                                 src="{% static 'images/pdficon.png' %}"
-                                                                 style="width:20px; margin:10px;">
+                                                        <div style="width:100%; display:block ;text-align: center;" >
+                                                            {% for file in resultItem.files %}
+                                                                <a href=" {{ file.url }}" target="_blank">
+                                                                    {% if file.extension == "pdf" %}
+                                                                        <img src="{% static 'images/pdficon.png' %}" style="width:20px; margin:10px;" alt="{{ file.description.0 }}">
 
-                                                            {% elif file.extension == "doc" or file.extension == "docx"
-                                                            %}
-                                                            <img src="{% static 'images/docfileicon.png' %}"
-                                                                 style="width:30px; margin:10px;">
+                                                                    {% elif file.extension == "doc" or file.extension == "docx"  %}
+                                                                        <img src="{% static 'images/docfileicon.png' %}" style="width:30px; margin:10px;">
 
-                                                            {% elif file.extension == "ppt" or file.extension == "pptx"
-                                                            %}
-                                                            <img src="{% static 'images/ppticon.png' %}"
-                                                                 style="width:30px; margin:10px;">
+                                                                    {% elif file.extension == "ppt" or file.extension == "pptx"  %}
+                                                                        <img src="{% static 'images/ppticon.png' %}" style="width:30px; margin:10px;">
 
-                                                            {% elif file.extension == "xls" or file.extension == "xlsx"
-                                                            %}
-                                                            <img src="{% static 'images/xlsxicnon.png' %}"
-                                                                 style="width:30px; margin:10px;">
+                                                                    {% elif file.extension == "xls" or file.extension == "xlsx" %}
+                                                                        <img src="{% static 'images/xlsxicnon.png' %}" style="width:30px; margin:10px;">
 
-                                                            {% elif file.extension == "csv" %}
-                                                            <img src="{% static 'images/csvicnon.png' %}"
-                                                                 style="width:30px; margin:10px;">
+                                                                    {% elif file.extension == "csv"  %}
+                                                                        <img src="{% static 'images/csvicnon.png' %}" style="width:30px; margin:10px;">
 
-                                                            {% elif file.extension == "xml" %}
-                                                            <img src="{% static 'images/xmlicon.png' %}"
-                                                                 style="width:30px; margin:10px;">
+                                                                    {% elif file.extension == "xml"  %}
+                                                                        <img src="{% static 'images/xmlicon.png' %}" style="width:30px; margin:10px;">
 
-                                                            {% elif file.extension == "json" %}
-                                                            <img src="{% static 'images/jsonincon.png' %}"
-                                                                 style="width:30px; margin:10px;">
+                                                                    {% elif file.extension == "json"  %}
+                                                                        <img src="{% static 'images/jsonincon.png' %}" style="width:30px; margin:10px;">
 
-                                                            {% elif file.extension == "zip" or file.extension == "rar"
-                                                            or file.extension == "7z" or file.extension == "tar" %}
-                                                            <img src="{% static 'images/zipicon.png' %}"
-                                                                 style="width:25px; margin:10px;">
+                                                                    {% elif file.extension == "zip" or file.extension == "rar" or file.extension == "7z" or file.extension == "tar" %}
+                                                                        <img src="{% static 'images/zipicon.png' %}" style="width:25px; margin:10px;">
 
-                                                            {% elif file.extension == "jpg" or file.extension == "png"
-                                                            or file.extension == "svg" or file.extension == "ico" or
-                                                            file.extension == "bmp"%}
-                                                            <img src="{% static 'images/imageicon.png' %}"
-                                                                 style="width:25px; margin:10px;">
+                                                                    {% elif file.extension == "jpg" or file.extension == "png" or file.extension == "svg" or file.extension == "ico" or file.extension == "bmp"%}
+                                                                        <img src="{% static 'images/imageicon.png' %}" style="width:25px; margin:10px;">
 
 
-                                                            {% else %}
-                                                            <img src="{% static 'images/attachments.png' %}"
-                                                                 style="width:27px; margin:10px;">
-                                                            {% endif %}
-                                                        </a>
-                                                        {% endfor %}
-                                                    </div>
+                                                                    {% else %}
+                                                                        <img src="{% static 'images/attachments.png' %}" style="width:27px; margin:10px;">
+                                                                    {% endif %}
+                                                                </a>
+                                                            {% endfor %}
+                                                        </div>
 
-                                                    <ul class="breadcrumb-title b-t-default p-t-10">
-                                                        <li class="breadcrumb-item"><a
-                                                                href="{{ resultItem.researchInfrastructure.0.url }}"
-                                                                target="_blank">
-                                                            {% if resultItem.researchInfrastructure.0.acronym ==
-                                                            "SeaDataNet" %}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/SeaDataNet.jpg' %}"
-                                                                 style="width:50px"/>
+                                                        <ul class="breadcrumb-title b-t-default p-t-10">
+                                                            <li class="breadcrumb-item"><a href="{{ resultItem.researchInfrastructure.0.url }}" target="_blank">
+                                                                {% if resultItem.researchInfrastructure.0.acronym == "SeaDataNet" %}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/SeaDataNet.jpg' %}" style="width:50px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "ICOS"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/ICOS.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "ICOS"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/ICOS.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "LifeWatch"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/LifeWatchERIC.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "LifeWatch"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/LifeWatchERIC.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "AnaEE"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/anaee.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "AnaEE"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/anaee.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "AQUACOSM"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/AQUACOSM.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "AQUACOSM"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/AQUACOSM.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "ARISE"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/arise.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "ARISE"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/arise.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "DANUBIUS-RI"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/DANUBIUS-RI.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "DANUBIUS-RI"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/DANUBIUS-RI.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "DiSSCo"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/DISSCO.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "DiSSCo"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/DISSCO.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EISCAT 3D"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EISCAT3D.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EISCAT 3D"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EISCAT3D.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "eLTER RI"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/elterRI.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "eLTER RI"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/elterRI.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EMBRC"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EMBRC.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EMBRC"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EMBRC.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EMSO"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EMSOERIC.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EMSO"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EMSOERIC.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EMPHASIS"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EMPHASIS.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EMPHASIS"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EMPHASIS.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EPOS"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EPOS.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EPOS"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EPOS.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EUFAR"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EUFAR.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EUFAR"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EUFAR.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "Euro-Argo ERIC"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/euroArgo.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "Euro-Argo ERIC"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/euroArgo.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EUROFLEETS+"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/Eurofleets.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EUROFLEETS+"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/Eurofleets.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EuroGOOS"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EuroGOOS.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EuroGOOS"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EuroGOOS.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "EUROCHAMP"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/EUROCHAMP.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "EUROCHAMP"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/EUROCHAMP.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "HEMERA"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/Hemera.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "HEMERA"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/Hemera.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "IAGOS"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/IAGOSERI.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "IAGOS"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/IAGOSERI.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "INTERACT"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/INTERACT.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "INTERACT"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/INTERACT.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "IS-ENES"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/ISENES.png' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "IS-ENES"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/ISENES.png' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "JERICO-RI"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/JERICO.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "JERICO-RI"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/JERICO.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "SeaDataNet"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/SeaDataNet.jpg' %}"
-                                                                 style="width:70px"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "SeaDataNet"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/SeaDataNet.jpg' %}" style="width:70px" />
 
-                                                            {% elif resultItem.researchInfrastructure.0.acronym ==
-                                                            "SIOS"%}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/sios.png' %}"
-                                                                 style="width:70px"/>
-                                                            {% else %}
-                                                            <img src="{% static 'images/ENVRI-Collection/RIs/KB.png' %}"
-                                                                 style="width:30px"/>
-                                                            {% endif %}
-                                                        </a>
-                                                            <a href="#"
-                                                               onclick="modifyBasket('add','Webpages',&quot;{%for title in resultItem.title %} {{title}} {% endfor %}&quot;,'{{ resultItem.url.0 }}', 'id');">
-                                                                <img src="{% static 'images/addToBasket.png' %}"
-                                                                     style="width:25px; right:0px;position: absolute;margin-right:20px;"/>
+                                                                {% elif resultItem.researchInfrastructure.0.acronym == "SIOS"%}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/sios.png' %}" style="width:70px" />
+                                                                {% else %}
+                                                                <img src="{% static 'images/ENVRI-Collection/RIs/KB.png' %}" style="width:30px" />
+                                                                {% endif %}
                                                             </a>
+                                                                <a href="#" onclick="modifyBasket('add','Webpages',&quot;{%for title in resultItem.title %} {{title}} {% endfor %}&quot;,'{{ resultItem.url.0 }}', 'id');">
+                                                                    <img src="{% static 'images/addToBasket.png' %}" style="width:25px; right:0px;position: absolute;margin-right:20px;" /> </a>
 
-                                                        </li>
-                                                    </ul>
+                                                            </li>
+                                                        </ul>
 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 {% endfor %}
                             </div>
 
                             <div style="text-align:center; margin-bottom:40px;">
                                 {%for page in page_range %}
-                                {% if page == cur_page %}
-                                <input class="btn btn-grd-primary" style="font-weight:bold; width:30px; padding:5px;"
-                                       type="button" value="{{ page }}">
-                                {% else %}
-                                <input class="btn btn-primary btn-outline-primary" onclick="btnPage({{ page }});"
-                                       style="font-weight:bold; width:30px; padding:5px;" type="button"
-                                       value="{{ page }}">
-                                {% endif %}
+                                    {% if page == cur_page %}
+                                        <input type="button" class="btn btn-grd-primary" style="font-weight:bold; width:30px; padding:5px;" value="{{ page }}">
+                                    {% else %}
+                                        <input type="button" class="btn btn-primary btn-outline-primary" style="font-weight:bold; width:30px; padding:5px;" value="{{ page }}" onclick="btnPage({{ page }});">
+                                    {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
@@ -705,18 +606,18 @@
 </div>
 {% csrf_token %}
 
-<script src="{% static 'js/jquery/jquery.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/jquery-ui/jquery-ui.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/popper.js/popper.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/jquery/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap/js/bootstrap.min.js' %}"></script>
 <!-- jquery slimscroll js -->
-<script src="{% static 'js/jquery-slimscroll/jquery.slimscroll.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
 <!-- modernizr js -->
-<script src="{% static 'js/modernizr/modernizr.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/modernizr/css-scrollbars.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/modernizr.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/modernizr/css-scrollbars.js' %}"></script>
 
 <!-- Custom js -->
-<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 <script src="{% static 'js/pcoded.min.js' %}"></script>
 <script src="{% static 'js/vartical-demo.js' %}"></script>
 <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
@@ -905,7 +806,6 @@ function modifyCart(data) {
   $('#MyCartCount').text(cnt);
 }
 {{functionList|safe}}
-
 </script>
 </body>
 </html>

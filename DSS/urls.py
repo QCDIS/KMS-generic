@@ -1,6 +1,7 @@
-from django.urls import re_path as url
+from django.conf.urls import url,include
+from DSS import views,models
+from django.conf.urls.static import static
 
-from DSS import views
 
 urlpatterns = [
     url(r'^numberOfSolutions', views.numberOfSolutions, name='numberOfSolutions'),
