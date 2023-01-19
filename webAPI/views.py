@@ -48,7 +48,7 @@ elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
 
 
-base_path = os.environ.get('BASE_PATH')
+base_path = os.environ.get('BASE_PATH').strip()
 
 
 # -----------------------------------------------------------------------------------------------------------------------
@@ -87,7 +87,7 @@ def genericsearch(request):
 
     searchResults = getSearchResults(request, facet, filter, page, term)
 
-    if (suggestedSearchTerm != ""):
+    if suggestedSearchTerm != "":
         searchResults["suggestedSearchTerm"] = ""
     else:
         suggestedSearchTerm = ""
