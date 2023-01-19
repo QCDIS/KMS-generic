@@ -7,7 +7,7 @@ from elasticsearch import Elasticsearch
 elasticsearch_url = os.environ['ELASTICSEARCH_URL']
 elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
-base_path = os.environ.get('BASE_PATH')
+base_path = os.environ.get('BASE_PATH').strip()
 
 # Create your views here.
 es = Elasticsearch(elasticsearch_url, http_auth=[elasticsearch_username, elasticsearch_password])
@@ -15,7 +15,7 @@ es = Elasticsearch(elasticsearch_url, http_auth=[elasticsearch_username, elastic
 
 # ---------------------------------------------------------------------------------------------------------------------
 def landingpage(request):
-    return render(request, 'landingpage.html', {'base_path': base_path})
+    return render(request, 'landingpage.html', {})
 
 
 # ---------------------------------------------------------------------------------------------------------------------

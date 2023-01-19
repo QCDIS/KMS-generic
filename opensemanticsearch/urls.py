@@ -1,13 +1,13 @@
 import os
-
-from django.conf.urls import include, url
+from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 from django.urls import re_path
 
-base_path = os.environ.get('BASE_PATH')
+base_path = os.environ.get('BASE_PATH').strip()
+
 urlpatterns = [
-    url(r'^' + base_path + '/', include([
+    re_path(r'^'+base_path+'/', include([
         path('admin/', admin.site.urls),
         re_path(r'^dataset_elastic/',
                 include(('dataset_elastic.urls', 'dataset_elastic'), namespace="dataset_elastic")),
@@ -18,7 +18,7 @@ urlpatterns = [
         re_path(r'^DSS/', include(('DSS.urls', 'DSS'), namespace="DSS")),
         re_path(r'^accountManagement/',
                 include(('accountManagement.urls', 'accountManagement'), namespace="accountManagement")),
-        path('', include(('genericpages.urls', 'genericpages'), namespace="genericpages")),
+        path('', include(('genericpages.urls', 'genericpages'), namespace="genericpages"))
     ])),
 ]
 

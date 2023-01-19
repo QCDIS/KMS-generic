@@ -48,7 +48,10 @@ elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
 
 
-base_path = os.environ.get('BASE_PATH')# -----------------------------------------------------------------------------------------------------------------------
+base_path = os.environ.get('BASE_PATH').strip()
+
+
+# -----------------------------------------------------------------------------------------------------------------------
 def aggregates(request):
     return 0
 
