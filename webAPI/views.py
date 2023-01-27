@@ -327,7 +327,7 @@ def indexingpipeline(request):
             res = es.index(index="webapi", id=uuid.uuid4(), body=newRecord)
             es.indices.refresh(index="webapi")
 
-    return render(request, 'webcontent_results.html', {'base_path':base_path})
+    return render(request, 'webcontent_results.html', {'base_path': base_path})
 
 
 # -----------------------------------------------------------------------------------------------------------------------

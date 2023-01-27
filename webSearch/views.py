@@ -1,23 +1,21 @@
-from django.http import JsonResponse, HttpResponse
-from django.http import HttpResponseBadRequest
-from django.shortcuts import render
-from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
 import json
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from elasticsearch_dsl import Index
+import os
 import re
+import uuid
+from urllib.parse import urlparse
+
 import dateutil.parser
 import ijson
 import nltk
 import numpy as np
-from urllib.parse import urlparse
-import os
 import requests
 from bs4 import BeautifulSoup
+from django.http import HttpResponseBadRequest
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render
+from elasticsearch import Elasticsearch
+from elasticsearch_dsl import Index
 from spellchecker import SpellChecker
-import uuid
 
 nltk.download('words')
 
