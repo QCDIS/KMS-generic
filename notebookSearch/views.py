@@ -1,16 +1,14 @@
-from django.shortcuts import render
-from urllib.request import urlopen
-import urllib
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
-import numpy as np
 import json
+import os
+import urllib
+from urllib.request import urlopen
+
+import numpy as np
 import requests
 from bs4 import BeautifulSoup
+from django.shortcuts import render
+from elasticsearch import Elasticsearch
 from spellchecker import SpellChecker
-import os
 
 elasticsearch_url = os.environ['ELASTICSEARCH_URL']
 elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')

@@ -1,12 +1,14 @@
 {
   "sios": {
     "seed": "https://sios-svalbard.org/metsis/search",
-    "permitted_urls_rules": ["/metsis/"],
-    "denied_urls_rules": [],
-    "keep_parameters":"False",
-    "page_counter":[
+    "permitted_urls_rules": [
+      "/metsis/"
     ],
-    "equal_crawled_features":[
+    "denied_urls_rules": [],
+    "keep_parameters": "False",
+    "page_counter": [
+    ],
+    "equal_crawled_features": [
       "url"
     ],
     "decision_model": "datasettest",
@@ -20,7 +22,6 @@
       "/records/oai:marineinfo.org:id:dataset:"
     ],
     "denied_urls_rules": [
-
     ],
     "keep_parameters": "True",
     "page_counter": [
@@ -3443,46 +3444,45 @@
         "propertyValue": ""
       },
       "ResearchInfrastructure": {
-        "htmlAllowed":false,
-        "cssClass":"navbar-collapse collapse",
-        "tag":"div",
-        "removeValue":[
-
+        "htmlAllowed": false,
+        "cssClass": "navbar-collapse collapse",
+        "tag": "div",
+        "removeValue": [
         ],
-        "searchKeywords":{
-          "infix":{
-            "tag":"",
-            "cssClass":"",
-            "content":[
+        "searchKeywords": {
+          "infix": {
+            "tag": "",
+            "cssClass": "",
+            "content": [
               ""
             ],
-            "propertyValue":""
+            "propertyValue": ""
           },
-          "prefix":{
-            "index":0,
-            "tag":"",
-            "cssClass":"",
-            "content":[
+          "prefix": {
+            "index": 0,
+            "tag": "",
+            "cssClass": "",
+            "content": [
               ""
             ],
-            "propertyValue":""
+            "propertyValue": ""
           },
-          "postfix":{
-            "index":0,
-            "tag":"",
-            "cssClass":"",
-            "content":[
+          "postfix": {
+            "index": 0,
+            "tag": "",
+            "cssClass": "",
+            "content": [
               ""
             ],
-            "propertyValue":""
+            "propertyValue": ""
           }
         },
-        "metadataFormat":"textual",
-        "expectedValues":{
+        "metadataFormat": "textual",
+        "expectedValues": {
           "LifeWatch": "LifeWatch"
         },
-        "datatype":"multivalue",
-        "propertyValue":""
+        "datatype": "multivalue",
+        "propertyValue": ""
       },
       "EssentialVariables": {
         "htmlAllowed": false,
@@ -3568,7 +3568,6 @@
       "/research-infrastructures/"
     ],
     "denied_urls_rules": [
-
     ],
     "keep_parameters": "True",
     "page_counter": [
@@ -3578,7 +3577,7 @@
     ],
     "decision_model": "envriwebsite",
     "allArray": "title",
-    "features":{
+    "features": {
       "htmlAllowed": false,
       "cssClass": "",
       "tag": "title",
@@ -3619,7 +3618,6 @@
       "propertyValue": ""
     }
   }
-
 }
 
 

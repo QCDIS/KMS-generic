@@ -1,9 +1,9 @@
-from django.conf.urls import include
 from django.urls import re_path as url
-from genericpages import views,models
-from django.conf.urls.static import static
+
+from genericpages import views
+
 urlpatterns = [
-	#url(r'^index', views.index, name='index'),
+    # url(r'^index', views.index, name='index'),
     url(r'^genericpages', views.genericpages, name='genericpages'),
     url('', views.landingpage, name='landingpage'),
 ]
