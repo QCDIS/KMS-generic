@@ -1,6 +1,14 @@
+[![Build and push container](https://github.com/QCDIS/KMS-generic/actions/workflows/make-relese.yml/badge.svg)](https://github.com/QCDIS/KMS-generic/actions/workflows/make-relese.yml)
 # envri-kbs
 
+```
 python3 -m spacy download en_core_web_md
+```
+```
+manage.py migrate
+manage.py  makemigrations
+manage.py  runserver 0.0.0.0:8000
+```
 
 ## Environment variables
 
