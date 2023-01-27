@@ -1,20 +1,11 @@
-from django.forms.widgets import NullBooleanSelect, Widget
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
-import simplejson
-from urllib.request import urlopen
 import urllib
 from datetime import datetime
 from elasticsearch import Elasticsearch
-from glob import glob
-from elasticsearch_dsl import Search, Q, Index
+from elasticsearch_dsl import Search, Index
 from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
 import numpy as np
 import json
-import uuid
 import os
-from github import BadCredentialsException
 from github import Github
 import time
 import re
