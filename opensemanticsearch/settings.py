@@ -15,6 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Add to python path so includes of ETL modules will work in Django environment
 import sys
+
 sys.path.append("/usr/lib/python3/dist-packages")
 sys.path.append("/usr/lib/python3/dist-packages/opensemanticetl")
 
@@ -22,13 +23,12 @@ sys.path.append("/usr/lib/python3/dist-packages/opensemanticetl")
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^8nhh!o3&s91t33ol^*g_6s=)@)3^s-k=w@u1(5h@83w*hyl0^'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -55,7 +55,7 @@ MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-   # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -90,13 +90,13 @@ WSGI_APPLICATION = 'opensemanticsearch.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-if os.path.isfile('/etc/opensemanticsearch-django-webapps/my.cnf'):
+if os.path.isfile('my.cnf'):
 
 	DATABASES = {
 		'default': {
 					'ENGINE': 'django.db.backends.mysql',
 					'OPTIONS': {
-							'read_default_file': '/etc/opensemanticsearch-django-webapps/my.cnf',
+							'read_default_file': 'my.cnf',
 					},
 				}
 	}
@@ -106,7 +106,7 @@ else:
 	DATABASES = {
 	    'default': {
 	        'ENGINE': 'django.db.backends.sqlite3',
-	        'NAME': '/var/opensemanticsearch/db/db.sqlite3',
+	        'NAME': 'db.sqlite3',
 	    }
 	}
 

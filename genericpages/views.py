@@ -1,8 +1,8 @@
+import json
+import os
+
 from django.shortcuts import render
 from elasticsearch import Elasticsearch
-import json
-import numpy as np
-import os
 
 elasticsearch_url = os.environ['ELASTICSEARCH_URL']
 elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
@@ -47,7 +47,8 @@ def genericpages(request):
         return render(request, 'recommendation.html', {'base_path': base_path})
     # ----------------------------------------------
     elif page == "RnD":
-        return render(request, 'RnDTeam.html', {"searchTerm": term, "functionList": getAllfunctionList(request),'base_path': base_path})
+        return render(request, 'RnDTeam.html',
+                      {"searchTerm": term, "functionList": getAllfunctionList(request), 'base_path': base_path})
     # ----------------------------------------------
     elif page == "pieChart":
         id, dataset_nodes1, dataset_edges1, numHits1 = graphV_dataset(100, term)

@@ -1,14 +1,12 @@
-from django.conf.urls import url,include
+from django.conf.urls import include
+from django.urls import re_path as url
 from notebookSearch import views,models
 from django.conf.urls.static import static
 
 
 urlpatterns = [
-    url(r'^genericsearch', views.genericsearch, name='genericsearch'),
-    url(r'^github_index_pipeline', views.github_index_pipeline, name='github_index_pipeline')
-
-
-
+    re_path(r'^genericsearch', views.genericsearch, name='genericsearch'),
+    re_path(r'^github_index_pipeline', views.github_index_pipeline, name='github_index_pipeline')
 ]
 
 
