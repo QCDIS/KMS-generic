@@ -1,7 +1,6 @@
-from django.conf.urls import url,include
-from webAPI import views,models
-from django.conf.urls.static import static
+from django.urls import re_path as url
 
+from webAPI import views
 
 urlpatterns = [
     url(r'^indexingpipeline', views.indexingpipeline, name='indexingpipeline'),

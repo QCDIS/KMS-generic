@@ -1,9 +1,8 @@
-from django.conf.urls import url,include
-from accountManagement import views,models
-from django.conf.urls.static import static
+from django.urls import re_path as url
 
+from accountManagement import views
 
 urlpatterns = [
-	#url(r'^index', views.index, name='index'),
+    # url(r'^index', views.index, name='index'),
     url(r'^login', views.login, name='login'),
 ]
