@@ -1,25 +1,19 @@
-from django.forms.widgets import NullBooleanSelect, Widget
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
-import simplejson
-from urllib.request import urlopen
-import urllib
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from glob import glob
-from elasticsearch_dsl import Search, Q, Index
-from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
-import numpy as np
 import json
+import os
+import urllib
+from urllib.request import urlopen
+
+import numpy as np
 import requests
 from bs4 import BeautifulSoup
+from django.shortcuts import render
+from elasticsearch import Elasticsearch
 from spellchecker import SpellChecker
-import os
 
 elasticsearch_url = os.environ['ELASTICSEARCH_URL']
 elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
+base_path = os.environ.get('BASE_PATH').strip()
 es = Elasticsearch(elasticsearch_url, http_auth=[elasticsearch_username, elasticsearch_password])
 # -------------------------------------------------------------------------------------------
 ACCESS_TOKEN_Github = os.environ['ACCESS_TOKEN_Github']
@@ -81,7 +75,7 @@ def genericsearch(request):
 
     searchResults = getSearchResults(request, facet, filter, page, term)
 
-    if (suggestedSearchTerm != ""):
+    if suggestedSearchTerm != "":
         searchResults["suggestedSearchTerm"] = ""
     else:
         suggestedSearchTerm = ""
@@ -91,7 +85,7 @@ def genericsearch(request):
             searchResults["NumberOfHits"] = 0
             searchResults["searchTerm"] = term
             searchResults["suggestedSearchTerm"] = suggestedSearchTerm
-
+    searchResults['base_path'] = base_path
     return render(request, 'notebook_results.html', searchResults)
 
 
@@ -120,6 +114,8 @@ def potentialSearchTerm(term):
     alternative_search_term = alternative_search_term.lstrip()
 
     return alternative_search_term
+
+
 
 
 # -----------------------------------------------------------------------------------------------------------------------

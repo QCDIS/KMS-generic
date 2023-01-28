@@ -1,10 +1,10 @@
 name: build container
 on:
-  [pull_request,push]
+  [ pull_request,push ]
 
 env:
-  DOCKERFILE:  Dockerfile
-  TAG:  kms-generic
+  DOCKERFILE: Dockerfile
+  TAG: kms-generic
   DOCKERHUB_IMAGE_ID: "qcdis/"
 
 
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build docker
         run: |
-         docker build . --file $DOCKERFILE -t $TAG
+          docker build . --file $DOCKERFILE -t $TAG
 
       - name: Start docker
         run: |

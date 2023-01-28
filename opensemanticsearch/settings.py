@@ -15,6 +15,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Add to python path so includes of ETL modules will work in Django environment
 import sys
+
 sys.path.append("/usr/lib/python3/dist-packages")
 sys.path.append("/usr/lib/python3/dist-packages/opensemanticetl")
 
@@ -28,7 +29,6 @@ SECRET_KEY = '^8nhh!o3&s91t33ol^*g_6s=)@)3^s-k=w@u1(5h@83w*hyl0^'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -55,7 +55,7 @@ MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-   # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -83,38 +83,36 @@ TEMPLATE_DIRS = (
     BASE_DIR + '/templates/',
 )
 
-
 WSGI_APPLICATION = 'opensemanticsearch.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 if os.path.isfile('my.cnf'):
 
-	DATABASES = {
-		'default': {
-					'ENGINE': 'django.db.backends.mysql',
-					'OPTIONS': {
-							'read_default_file': 'my.cnf',
-					},
-				}
-	}
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'OPTIONS': {
+                'read_default_file': 'my.cnf',
+            },
+        }
+    }
 
 else:
 
-	DATABASES = {
-	    'default': {
-	        'ENGINE': 'django.db.backends.sqlite3',
-	        'NAME': 'db.sqlite3',
-	    }
-	}
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'db.sqlite3',
+        }
+    }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-#LANGUAGE_CODE = 'de-de'
+# LANGUAGE_CODE = 'de-de'
 
 TIME_ZONE = 'UTC'
 
@@ -138,9 +136,7 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

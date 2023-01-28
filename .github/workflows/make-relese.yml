@@ -4,8 +4,8 @@ on:
     tags:
       - '*'
 env:
-  DOCKERFILE:  Dockerfile
-  TAG:  kms-generic
+  DOCKERFILE: Dockerfile
+  TAG: kms-generic
   DOCKERHUB_IMAGE_ID: "qcdis/"
 
 jobs:

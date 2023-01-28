@@ -1,28 +1,22 @@
-from django.forms.widgets import NullBooleanSelect, Widget
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
-import simplejson
-from urllib.request import urlopen
-import urllib
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from glob import glob
-from elasticsearch_dsl import Search, Q, Index
-from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
-from .indexingPipeline import DatasetRecords
-from .indexingPipeline import WebCrawler
-import re
-import numpy as np
 import json
+import os
+import re
+
+import numpy as np
 import requests
 from bs4 import BeautifulSoup
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render
+from elasticsearch import Elasticsearch
+from elasticsearch_dsl import Search, Q
 from spellchecker import SpellChecker
-import os
+
+from .indexingPipeline import DatasetRecords
 
 elasticsearch_url = os.environ['ELASTICSEARCH_URL']
 elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
+base_path = os.environ.get('BASE_PATH').strip()
 
 es = Elasticsearch(elasticsearch_url, http_auth=[elasticsearch_username, elasticsearch_password])
 
@@ -126,7 +120,7 @@ def genericsearch(request):
 
     searchResults = getSearchResults(request, facet, filter, page, term)
 
-    if (suggestedSearchTerm != ""):
+    if suggestedSearchTerm != "":
         searchResults["suggestedSearchTerm"] = ""
     else:
         suggestedSearchTerm = ""
@@ -136,7 +130,7 @@ def genericsearch(request):
             searchResults["NumberOfHits"] = 0
             searchResults["searchTerm"] = term
             searchResults["suggestedSearchTerm"] = suggestedSearchTerm
-
+    searchResults['base_path'] = base_path
     return render(request, 'dataset_results.html', searchResults)
 
 
@@ -348,6 +342,8 @@ def potentialSearchTerm(term):
     return alternative_search_term
 
 
+
+
 # ----------------------------------------------------------------------------------------
 def rest(request):
     try:
@@ -407,7 +403,7 @@ def rest(request):
 # -------------------------------------------------------------------------
 def home(request):
     # index_elastic()
-    context = {}
+    context = {'base_path': base_path}
     # context['form'] = SelectionForm()
     # context['result'] = SelectionForm.fields
     return render(request, "home.html", context)
@@ -415,10 +411,9 @@ def home(request):
 
 # ----------------------------------------------------------------------------------------
 def result(request):
-    context = {}
+    context = {'base_path': base_path}
     # context['result'] = SelectionForm()
-    return render(request, "result.html")
-
+    return render(request, "result.html", context)
 
 # -------------------------------------------------------------------------
 def search_index(request):
@@ -473,7 +468,7 @@ def search_index(request):
                       year_to=year_to_term)
 
     # print(results)
-    context = {'results': results, 'count': len(results), 'search_term': search_term}
+    context = {'results': results, 'count': len(results), 'search_term': search_term, 'base_path': base_path}
     return render(request, 'search.html', context)
 
 
