@@ -46,6 +46,8 @@ aggregares = {
 elasticsearch_url = os.environ['ELASTICSEARCH_URL']
 elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
+
+
 base_path = os.environ.get('BASE_PATH')
 
 
@@ -254,31 +256,31 @@ def synonyms(term):
 
 # -----------------------------------------------------------------------------------------------------------------------
 def potentialSearchTerm(term):
-    alternativeSearchTerm = ""
-
     spell = SpellChecker()
-    searchTerm = term.split()
-    alternativeSearchTerm = ""
-    for sTerm in searchTerm:
-        alterWord = spell.correction(sTerm)
-        if (alterWord != ""):
-            alternativeSearchTerm = alternativeSearchTerm + " " + alterWord
+    search_term = term.split()
+    alternative_search_term = ""
+    for s_term in search_term:
+        alter_word = spell.correction(s_term)
+        if alter_word:
+            alternative_search_term = alternative_search_term + " " + alter_word
 
-    alternativeSearchTerm = alternativeSearchTerm.rstrip()
-    alternativeSearchTerm = alternativeSearchTerm.lstrip()
+    alternative_search_term = alternative_search_term.rstrip()
+    alternative_search_term = alternative_search_term.lstrip()
 
-    if alternativeSearchTerm == term:
-        alternativeSearchTerm = ""
-        for sTerm in searchTerm:
-            syn = synonyms(sTerm)
+    if alternative_search_term == term:
+        alternative_search_term = ""
+        for s_term in search_term:
+            syn = synonyms(s_term)
             if len(syn) > 0:
-                alterWord = syn[0]
-                alternativeSearchTerm = alternativeSearchTerm + " " + alterWord
+                alter_word = syn[0]
+                alternative_search_term = alternative_search_term + " " + alter_word
 
-    alternativeSearchTerm = alternativeSearchTerm.rstrip()
-    alternativeSearchTerm = alternativeSearchTerm.lstrip()
+    alternative_search_term = alternative_search_term.rstrip()
+    alternative_search_term = alternative_search_term.lstrip()
 
-    return alternativeSearchTerm
+    return alternative_search_term
+
+
 
 
 # -----------------------------------------------------------------------------------------------------------------------
