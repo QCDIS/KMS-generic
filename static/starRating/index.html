@@ -1,39 +1,39 @@
 <!DOCTYPE HTML>notification
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accessible rating example</title>
-  <link rel="stylesheet" type="text/css" href="starability-minified/starability-all.min.css"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Accessible rating example</title>
+    <link href="starability-minified/starability-all.min.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 
 
-  <form>
+<form>
     <!-- Change starability-basic to different class to see animations. -->
     <fieldset class="starability-growRotate">
-      <legend>Basic star rating:</legend>
-      <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+        <legend>Basic star rating:</legend>
+        <input aria-label="No rating." checked class="input-no-rate" id="no-rate" name="rating" type="radio" value="0"/>
 
-      <input type="radio" id="rate1" name="rating" value="1" />
-      <label for="rate1">1 star.</label>
+        <input id="rate1" name="rating" type="radio" value="1"/>
+        <label for="rate1">1 star.</label>
 
-      <input type="radio" id="rate2" name="rating" value="2" />
-      <label for="rate2">2 stars.</label>
+        <input id="rate2" name="rating" type="radio" value="2"/>
+        <label for="rate2">2 stars.</label>
 
-      <input type="radio" id="rate3" name="rating" value="3" />
-      <label for="rate3">3 stars.</label>
+        <input id="rate3" name="rating" type="radio" value="3"/>
+        <label for="rate3">3 stars.</label>
 
-      <input type="radio" id="rate4" name="rating" value="4" />
-      <label for="rate4">4 stars.</label>
+        <input id="rate4" name="rating" type="radio" value="4"/>
+        <label for="rate4">4 stars.</label>
 
-      <input type="radio" id="rate5" name="rating" value="5" />
-      <label for="rate5">5 stars.</label>
+        <input id="rate5" name="rating" type="radio" value="5"/>
+        <label for="rate5">5 stars.</label>
 
-      <span class="starability-focus-ring"></span>
+        <span class="starability-focus-ring"></span>
     </fieldset>
-  </form>
+</form>
 
 </body>
 </html>

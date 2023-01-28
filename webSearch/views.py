@@ -1,39 +1,28 @@
-from django.shortcuts import render
-from django.forms.widgets import NullBooleanSelect, Widget
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
-from django.http import HttpResponseBadRequest
-from django.shortcuts import render
-import simplejson
-from urllib.request import urlopen
-import urllib
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from glob import glob
-from elasticsearch_dsl import Search, Q, Index
-from elasticsearch_dsl.query import MatchAll
-from django.core import serializers
 import json
-from datetime import datetime
-from elasticsearch import Elasticsearch
-from elasticsearch_dsl import Search, Index
+import os
 import re
+import uuid
+from urllib.parse import urlparse
+
 import dateutil.parser
 import ijson
 import nltk
 import numpy as np
-from textblob import TextBlob
-from urllib.parse import urlparse
-import os
 import requests
 from bs4 import BeautifulSoup
+from django.http import HttpResponseBadRequest
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render
+from elasticsearch import Elasticsearch
+from elasticsearch_dsl import Index
 from spellchecker import SpellChecker
-import uuid
 
 nltk.download('words')
 
 elasticsearch_url = os.environ['ELASTICSEARCH_URL']
 elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
+base_path = os.environ.get('BASE_PATH').strip()
 
 words = set(nltk.corpus.words.words())
 ResearchInfrastructures = {
@@ -637,7 +626,7 @@ def genericsearch(request):
 
     searchResults = getSearchResults(request, facet, filter, searchtype, page, term)
 
-    if (suggestedSearchTerm != ""):
+    if suggestedSearchTerm != "":
         searchResults["suggestedSearchTerm"] = ""
     else:
         suggestedSearchTerm = ""
@@ -653,6 +642,7 @@ def genericsearch(request):
     else:
         htmlrender = 'webcontent_results.html'
 
+    searchResults['base_path'] = base_path
     return render(request, htmlrender, searchResults)
 
 
@@ -913,8 +903,10 @@ def downloadCart(request):
                       "Datasets": Datasets,
                       "Web APIs": WebAPIs,
                       "Notebooks": Notebooks,
+                      "base_path": base_path
                   }
                   )
+
 
 
 # -----------------------------------------------------------------------------------------------------------------------

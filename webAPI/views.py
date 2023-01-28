@@ -1,15 +1,13 @@
-from django.shortcuts import render
-import glob
-from os.path import isfile, join
-from elasticsearch import Elasticsearch
-from elasticsearch_dsl import Search, Index
-import os
-from os import walk
 import json
+import os
 import uuid
+
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
+from django.shortcuts import render
+from elasticsearch import Elasticsearch
+from elasticsearch_dsl import Index
 from spellchecker import SpellChecker
 
 aggregares = {
@@ -50,6 +48,9 @@ elasticsearch_username = os.environ.get('ELASTICSEARCH_USERNAME')
 elasticsearch_password = os.environ.get('ELASTICSEARCH_PASSWORD')
 
 
+base_path = os.environ.get('BASE_PATH').strip()
+
+
 # -----------------------------------------------------------------------------------------------------------------------
 def aggregates(request):
     return 0
@@ -86,7 +87,7 @@ def genericsearch(request):
 
     searchResults = getSearchResults(request, facet, filter, page, term)
 
-    if (suggestedSearchTerm != ""):
+    if suggestedSearchTerm != "":
         searchResults["suggestedSearchTerm"] = ""
     else:
         suggestedSearchTerm = ""
@@ -97,6 +98,7 @@ def genericsearch(request):
             searchResults["searchTerm"] = term
             searchResults["suggestedSearchTerm"] = suggestedSearchTerm
 
+    searchResults['base_path'] = base_path
     return render(request, 'webapi_results.html', searchResults)
 
 
@@ -279,6 +281,8 @@ def potentialSearchTerm(term):
     return alternative_search_term
 
 
+
+
 # -----------------------------------------------------------------------------------------------------------------------
 # Create your views here.
 def indexingpipeline(request):
@@ -325,7 +329,7 @@ def indexingpipeline(request):
             res = es.index(index="webapi", id=uuid.uuid4(), body=newRecord)
             es.indices.refresh(index="webapi")
 
-    return render(request, 'webcontent_results.html', {})
+    return render(request, 'webcontent_results.html', {'base_path': base_path})
 
 
 # -----------------------------------------------------------------------------------------------------------------------
