@@ -232,7 +232,7 @@ function search(searchBoxNum){
         queryParams.set("term", searchValue);
         queryParams.set("page", 1);
         // Replace current querystring with the new one.
-        window.location.replace("../webSearch/genericsearch?"+queryParams.toString());
+        window.location.replace("../{{ base_path }}/webSearch/genericsearch?"+queryParams.toString());
 
     }
 }
