@@ -317,31 +317,31 @@ def synonyms(term):
 
 # -----------------------------------------------------------------------------------------------------------------------
 def potentialSearchTerm(term):
-    alternativeSearchTerm = ""
-
     spell = SpellChecker()
-    searchTerm = term.split()
-    alternativeSearchTerm = ""
-    for sTerm in searchTerm:
-        alterWord = spell.correction(sTerm)
-        if (alterWord != ""):
-            alternativeSearchTerm = alternativeSearchTerm + " " + alterWord
+    search_term = term.split()
+    alternative_search_term = ""
+    for sTerm in search_term:
+        alter_word = spell.correction(sTerm)
+        if alter_word:
+            alternative_search_term = alternative_search_term + " " + alter_word
 
-    alternativeSearchTerm = alternativeSearchTerm.rstrip()
-    alternativeSearchTerm = alternativeSearchTerm.lstrip()
+    alternative_search_term = alternative_search_term.rstrip()
+    alternative_search_term = alternative_search_term.lstrip()
 
-    if alternativeSearchTerm == term:
-        alternativeSearchTerm = ""
-        for sTerm in searchTerm:
+    if alternative_search_term == term:
+        alternative_search_term = ""
+        for sTerm in search_term:
             syn = synonyms(sTerm)
             if len(syn) > 0:
-                alterWord = syn[0]
-                alternativeSearchTerm = alternativeSearchTerm + " " + alterWord
+                alter_word = syn[0]
+                alternative_search_term = alternative_search_term + " " + alter_word
 
-    alternativeSearchTerm = alternativeSearchTerm.rstrip()
-    alternativeSearchTerm = alternativeSearchTerm.lstrip()
+    alternative_search_term = alternative_search_term.rstrip()
+    alternative_search_term = alternative_search_term.lstrip()
 
-    return alternativeSearchTerm
+    return alternative_search_term
+
+
 
 
 # ----------------------------------------------------------------------------------------
@@ -414,7 +414,6 @@ def result(request):
     context = {'base_path': base_path}
     # context['result'] = SelectionForm()
     return render(request, "result.html", context)
-
 
 # -------------------------------------------------------------------------
 def search_index(request):
