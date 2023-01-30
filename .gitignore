@@ -1,3 +1,5 @@
 /var/
 /db.sqlite3
 /.idea
+/staticfiles/
+/search/
