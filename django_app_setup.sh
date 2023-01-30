@@ -6,4 +6,4 @@ python manage.py migrate
 
 #gunicorn --bind :7777 --workers 4 search_engine_app.wsgi:application
 
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver --nostatic 0.0.0.0:8000
