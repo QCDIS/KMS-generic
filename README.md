@@ -27,11 +27,3 @@ manage.py  runserver 0.0.0.0:8000
 
 
 ## pre-commit 
-
-If you get an error:
-```
-==> At Repository(repo='https://github.com/gitguardian/ggshield')
-==> At key: hooks
-==> At Hook(id=MISSING)
-=====> Missing required key: id
-```
