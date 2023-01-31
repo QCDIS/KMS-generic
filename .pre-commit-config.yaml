@@ -5,3 +5,10 @@ repos:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
+
+-   repo: https://github.com/gitguardian/ggshield
+    rev: v1.14.2
+    hooks:
+    - id: pre-commit
+    - language_version: python3
+    - stages: [commit]

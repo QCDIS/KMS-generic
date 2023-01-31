@@ -23,3 +23,15 @@ manage.py  runserver 0.0.0.0:8000
 - KMS_ADMIN_USERNAME=<ADMIN_USERNAME>
 - KMS_ADMIN_PASSWORD=<ADMIN_PASSWORD>
 - BASE_PATH=search
+
+
+
+## pre-commit 
+
+If you get an error:
+```
+==> At Repository(repo='https://github.com/gitguardian/ggshield')
+==> At key: hooks
+==> At Hook(id=MISSING)
+=====> Missing required key: id
+```
