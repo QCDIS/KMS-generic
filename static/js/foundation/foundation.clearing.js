@@ -149,7 +149,7 @@
       if ($el.parent().hasClass('carousel')) {
         return;
       }
-      
+
       $el.after('<div id="foundationClearingHolder"></div>');
       var grid = $el.detach();
       var grid_outerHTML = '';
@@ -158,7 +158,7 @@
       } else {
         grid_outerHTML = grid[0].outerHTML;
       }
-      
+
       var holder = this.S('#foundationClearingHolder'),
           settings = $el.data(this.attr_name(true) + '-init'),
           grid = $el.detach(),

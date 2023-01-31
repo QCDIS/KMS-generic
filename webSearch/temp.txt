@@ -39,16 +39,3 @@ title_txt=[]
                 dc_format_ss.clear()
                 File_Size_ss.clear()
                 _text_.clear()
-
-
-
-
-
-
-
-
-
-
-
-
-

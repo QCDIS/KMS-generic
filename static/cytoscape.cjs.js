@@ -18440,7 +18440,7 @@ var defaults$a = {
   // callback on layoutstop
   transform: function transform(node, position) {
     return position;
-  } // transform a given node position. Useful for changing flow direction in discrete layouts 
+  } // transform a given node position. Useful for changing flow direction in discrete layouts
 
 };
 
@@ -20066,7 +20066,7 @@ var defaults$d = {
   // callback on layoutstop
   transform: function transform(node, position) {
     return position;
-  } // transform a given node position. Useful for changing flow direction in discrete layouts 
+  } // transform a given node position. Useful for changing flow direction in discrete layouts
 
 };
 
@@ -20435,7 +20435,7 @@ var defaults$g = {
   // callback on layoutstop
   transform: function transform(node, position) {
     return position;
-  } // transform a given node position. Useful for changing flow direction in discrete layouts 
+  } // transform a given node position. Useful for changing flow direction in discrete layouts
 
 };
 

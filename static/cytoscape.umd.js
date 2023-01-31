@@ -1761,9 +1761,9 @@
 
     /*
     Insert item x in list a, and keep it sorted assuming a is sorted.
-    
+
     If x is already in a, insert it to the right of the rightmost x.
-    
+
     Optional args lo (default 0) and hi (default a.length) bound the slice
     of a to be searched.
      */
@@ -1830,7 +1830,7 @@
 
     /*
     Pop and return the current smallest value, and add the new item.
-    
+
     This is more efficient than heappop() followed by heappush(), and can be
     more appropriate when using a fixed size heap. Note that the value
     returned may be larger than item! That constrains reasonable use of
@@ -19199,7 +19199,7 @@
     // callback on layoutstop
     transform: function transform(node, position) {
       return position;
-    } // transform a given node position. Useful for changing flow direction in discrete layouts 
+    } // transform a given node position. Useful for changing flow direction in discrete layouts
 
   };
 
@@ -20825,7 +20825,7 @@
     // callback on layoutstop
     transform: function transform(node, position) {
       return position;
-    } // transform a given node position. Useful for changing flow direction in discrete layouts 
+    } // transform a given node position. Useful for changing flow direction in discrete layouts
 
   };
 
@@ -21194,7 +21194,7 @@
     // callback on layoutstop
     transform: function transform(node, position) {
       return position;
-    } // transform a given node position. Useful for changing flow direction in discrete layouts 
+    } // transform a given node position. Useful for changing flow direction in discrete layouts
 
   };
 

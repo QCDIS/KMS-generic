@@ -220,7 +220,7 @@
             topbar.css('height', $this.siblings('ul').outerHeight(true) + topbar.data('height'));
           }
         });
-      
+
       S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
         self.resize.call(self);
       }, 50)).trigger('resize');
@@ -347,7 +347,7 @@
           } else {
             var $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5></li>');
           }
-  
+
           // Copy link to subnav
           if (settings.custom_back_text == true) {
             $('h5>a', $titleLi).html(settings.back_text);
@@ -391,7 +391,7 @@
 
     update_sticky_positioning: function() {
       var klass = '.' + this.settings.sticky_class,
-          $window = this.S(window), 
+          $window = this.S(window),
           self = this;
 
       if (self.settings.sticky_topbar && self.is_sticky(this.settings.sticky_topbar,this.settings.sticky_topbar.parent(), this.settings)) {

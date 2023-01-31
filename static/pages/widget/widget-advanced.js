@@ -1309,7 +1309,7 @@ $(document).ready(function() {
             }
         });
 
-    
+
 
         // website Traffic
         var chart = AmCharts.makeChart("website-traffic", {

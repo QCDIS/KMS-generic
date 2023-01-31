@@ -46,11 +46,11 @@
           }
 
           var settings = target.data(self.attr_name(true) + '-init') || self.settings;
-          
+
           if(S(e.target).data(self.data_attr()) && settings.is_hover) {
             self.closeall.call(self);
           }
-          
+
           if (settings.is_hover) self.open.apply(self, [dropdown, target]);
         })
         .on('mouseleave.fndtn.dropdown', '[' + this.attr_name() + '], [' + this.attr_name() + '-content]', function (e) {
@@ -72,8 +72,8 @@
           if (S(e.target).data(self.data_attr()) || S(e.target).parent().data(self.data_attr())) {
             return;
           }
-          if (!(S(e.target).data('revealId')) && 
-            (parent.length > 0 && (S(e.target).is('[' + self.attr_name() + '-content]') || 
+          if (!(S(e.target).data('revealId')) &&
+            (parent.length > 0 && (S(e.target).is('[' + self.attr_name() + '-content]') ||
               $.contains(parent.first()[0], e.target)))) {
             e.stopPropagation();
             return;
@@ -185,7 +185,7 @@
     },
 
     style : function (dropdown, target, settings) {
-      var css = $.extend({position: 'absolute'}, 
+      var css = $.extend({position: 'absolute'},
         this.dirs[settings.align].call(dropdown, target, settings));
 
       dropdown.attr('style', '').css(css);
@@ -217,7 +217,7 @@
         }
 
         if (Foundation.rtl) {
-          return {left: p.left - this.outerWidth() + t.outerWidth(), 
+          return {left: p.left - this.outerWidth() + t.outerWidth(),
             top: p.top - this.outerHeight()};
         }
 

@@ -222,7 +222,7 @@
       }
 
       function handleFormSubmit1(form, input) {
-          // 
+          //
           // validate the form aainst the constraints
           var errors = validate(form, constraints1);
           // then we update the form to reflect the results
@@ -233,7 +233,7 @@
       }
       // Updates the inputs with the validation errors
       function showErrors1(form, errors) {
-          // 
+          //
           // We loop through all the inputs and show the errors for that input
           _.each(form.querySelectorAll("input[name], select[name]"), function(input) {
               // Since the errors can be null if no errors were found we need to handle
@@ -271,7 +271,7 @@
 
       // Recusively finds the closest parent that has the specified class
       function closestParent1(child, className) {
-          // 
+          //
           if (!child || child == document) {
               return null;
           }
@@ -297,7 +297,7 @@
       // Adds the specified error with the following markup
       // <p class="help-block error">[message]</p>
       function addError1(messages, error) {
-          // 
+          //
 
           var block = document.createElement("i");
           block.classList.add("text-danger");
@@ -529,7 +529,7 @@
               formGroup.classList.add("has-error");
               // then we append all the errors
               _.each(errors, function(error) {
-                  // 
+                  //
                   addError3(messages, error, input);
               });
           } else {
